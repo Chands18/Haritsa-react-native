@@ -7,7 +7,7 @@ import {NavigationContainer} from '@react-navigation/native';
 export default function App() {
   return (
     <View>
-      <Text>Main App</Text>
+      <Text>Main bangke</Text>
     </View>
   );
 }
