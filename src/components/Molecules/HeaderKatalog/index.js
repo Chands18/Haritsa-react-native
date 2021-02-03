@@ -1,10 +1,10 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-export default function Katalog({navigation}) {
+export default function HeaderKatalog() {
     return (
         <View>
-            <Text>Katalog</Text>
+            <Text></Text>
         </View>
     )
 }

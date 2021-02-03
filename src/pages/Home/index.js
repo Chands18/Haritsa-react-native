@@ -1,10 +1,10 @@
 import React from 'react'
-import { StyleSheet, Text, View, ScrollView} from 'react-native'
+import { StyleSheet,TouchableOpacity, Text, View, ScrollView} from 'react-native'
 import { Photo } from '../../components/Atoms/Logo'
 import { Pickers } from '../../components/Atoms/Picker'
 import { Footer, Layout } from '../../components/Molecules'
 
-export default function Home() {
+export default function Home({navigation}) {
     return (
         <ScrollView style={{width:'100%', height:'100%'}}>
             <View style={styles.container}>
