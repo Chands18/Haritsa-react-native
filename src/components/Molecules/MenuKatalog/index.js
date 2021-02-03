@@ -17,7 +17,7 @@ export default function MenuKatalog() {
                     </View>
                     <View>
                     <View style={{width:58, height:58, borderWidth:1, borderColor:'red', borderRadius:10, }}></View>
-                        <Text style={{fontSize:11, fontWeight:'bold', textAlign:'center', marginTop:6}}>Kategor 3</Text>
+                        <Text style={{fontSize:11, fontWeight:'bold', textAlign:'center', marginTop:6}}>Kategori 3</Text>
                     </View>
                     <View>
                     <View style={{width:58, height:58, borderWidth:1, borderColor:'red', borderRadius:10, }}></View>

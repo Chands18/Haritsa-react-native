@@ -1,26 +1,28 @@
 import React from 'react'
 import { StyleSheet, Text, View, FlatList, Dimensions } from 'react-native'
 import { DiscountCard } from '..'
-import { images } from '../../../assets';
 
-const dummiImage = [images.img_Logo,images.img_Logo]
 const {width,height}=Dimensions.get('window');
 const dummies = [
     {
         id:1,
-        text:'Diskon 1'
+        text:''
     },
     {
         id:2,
-        text:'Diskon 2'
+        text:''
     },
     {
         id:3,
-        text:'Diskon 3'
+        text:''
     },
+    {
+        id:4,
+        text:''
+    }
 ]
 
-export default function Layout() {
+export default function PromoKatalog () {
     const renderItem=({item,index})=>{
         return(
             <View style={{width:100,marginRight:10,alignItems:'center'}}>
@@ -42,7 +44,6 @@ export default function Layout() {
         <View style={styles.container}>
             <Text style={styles.text}>Promo Di Bulan Ini</Text>
                 <View style={{marginTop:10, justifyContent:'center',alignItems:'center' ,width:'100%'}}>
-                    <FlatList scrollEnabled={false} data={dummies} numColumns={3} style={{height:200}} renderItem={renderItem} keyExtractor={(item,index)=>index.toString()} />
                 </View>
                 <View >
                     <FlatList scrollEnabled={true} data={dummies} horizontal style={{marginTop:10,height:100,width:'100%'}} renderItem={renderItem2} keyExtractor={(item,index)=>index.toString()} />
@@ -65,4 +66,3 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
 })
-

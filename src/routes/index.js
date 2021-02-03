@@ -59,13 +59,12 @@ const BottomTabNavigator = () => {
       <Tab.Screen
         name="katalog"
         component={Katalog}
-        options={{title: 'katalog'}}
+        options={{title: 'Katalog'}}
       />
-
       <Tab.Screen
         name="promo"
         component={Promo}
-        options={{title: 'promo'}}
+        options={{title: 'Promo'}}
       />
 
 

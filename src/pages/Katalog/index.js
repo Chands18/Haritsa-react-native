@@ -1,14 +1,18 @@
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, ScrollView } from 'react-native'
 import { HeaderKatalog } from '../../components/Molecules'
 import { MenuKatalog } from '../../components/Molecules'
+import { PromoKatalog } from '../../components/Molecules'
 
 export default function Katalog({navigation}) {
     return (
-        <View style={styles.container}>
-            <HeaderKatalog/>
-            <MenuKatalog/>
-        </View>
+        <ScrollView style={{width:'100%', height:'100%'}}>
+            <View style={styles.container}>
+                <HeaderKatalog/>
+                <MenuKatalog/>
+                <PromoKatalog/>
+            </View>
+        </ScrollView>
     )
 }
 
