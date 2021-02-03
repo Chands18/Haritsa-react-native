@@ -14,7 +14,7 @@ export default function HeaderKatalog() {
                     <Image source={require('./../../../assets/Icon/logo1.png')}/>
                 </View>
             </View>
-            <Text style={{paddingLeft:20,paddingTop:110}}>
+            <Text style={{paddingLeft:20,paddingTop:110, fontSize:11}}>
                 slide show berita
             </Text>
         </View>
