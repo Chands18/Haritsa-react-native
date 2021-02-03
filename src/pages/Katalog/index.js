@@ -1,8 +1,9 @@
 import React from 'react'
 import { StyleSheet, Text, View, ScrollView } from 'react-native'
-import { HeaderKatalog } from '../../components/Molecules'
+import { HeaderKatalog, KatalogCards } from '../../components/Molecules'
 import { MenuKatalog } from '../../components/Molecules'
 import { PromoKatalog } from '../../components/Molecules'
+
 
 export default function Katalog({navigation}) {
     return (
@@ -11,6 +12,7 @@ export default function Katalog({navigation}) {
                 <HeaderKatalog/>
                 <MenuKatalog/>
                 <PromoKatalog/>
+                <KatalogCards/>
             </View>
         </ScrollView>
     )

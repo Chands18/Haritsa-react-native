@@ -5,5 +5,6 @@ import Footer from './Footer'
 import HeaderKatalog from './HeaderKatalog'
 import MenuKatalog from './MenuKatalog'
 import PromoKatalog from './PromoKatalog'
+import KatalogCards from './KatalogCards'
 
-export {Layout,DiscountCard,Footer,NewsCard,HeaderKatalog,MenuKatalog,PromoKatalog};
+export {Layout,DiscountCard,Footer,NewsCard,HeaderKatalog,MenuKatalog,PromoKatalog,KatalogCards};
