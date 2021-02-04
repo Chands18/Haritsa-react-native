@@ -6,7 +6,7 @@ const HeaderPromo = () => {
         <View style={{backgroundColor:'lavender',height:200}}> 
             <View style={{paddingTop:15}}>
                 <View style={{flex:1}}>
-                <Image source={require('../../../assets/Icon/BackIcon.png')} style={{position:'absolute', top:10}}/>
+                <Image source={require('../../../assets/Icon/BackIcon.png')} style={{position:'absolute', top:10, left:15}}/>
                 </View>
                 <View style={{width:60,marginHorizontal:180}}>
                     <Text style={{fontSize:18,fontWeight:'bold', justifyContent:'center',top:7}}>Promo</Text>

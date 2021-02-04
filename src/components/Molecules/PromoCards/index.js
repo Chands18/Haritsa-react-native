@@ -57,12 +57,12 @@ const renderItem=(item,index) => {
     <View>
       <View
         style={{
-          marginTop: 10,
           borderColor:'black',
-          width:180,
+          width:'100%',
           paddingHorizontal:10,
           paddingTop:10,
-          marginLeft:6
+          marginLeft:6,
+          flexDirection:'row',
           
         }}>
         <Image
@@ -70,9 +70,9 @@ const renderItem=(item,index) => {
             uri:
               'https://i0.wp.com/www.lenterabisnis.com/wp-content/uploads/2018/07/atribut-produk.jpg?fit=600%2C400&ssl=1',
           }}
-          style={{width: '100%', height: 170}}
+          style={{width:170, height: 170}}
         />
-        <View style={{padding:10, backgroundColor:'lavender'}}>
+        <View style={{padding:10, backgroundColor:'lavender', width:200}}>
           <Text>Nama Produk</Text>
           <Text>Rp 1.000</Text>
           <Image
@@ -91,24 +91,22 @@ const renderItem=(item,index) => {
     </View>
   );
 }
-const KatalogCards = () => {
+const PromoCards = () => {
   return (
     <View
       style={{
-        backgroundColor: 'white',
-        marginTop: 20,
+        marginTop: 10,
         flexDirection: 'column',
-        padding: 15,
+        padding: 0,
         flexWrap: 'wrap',
-        marginRight: -10,
+        marginRight: 10,
       }}>
-      <Text style={{fontWeight:'bold'}}>Produk</Text>
-      <FlatList numColumns={2} renderItem={renderItem} data={data} keyExtractor={(item,index)=>index.toString()} />
+      <FlatList numColumns={1} renderItem={renderItem} data={data} keyExtractor={(item,index)=>index.toString()} />
         
     </View>
   );
 };
 
-export default KatalogCards;
+export default PromoCards;
 
 const styles = StyleSheet.create({});
