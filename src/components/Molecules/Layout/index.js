@@ -34,6 +34,7 @@ export default function Layout() {
     const renderItem2=({item,index})=>{
         return(
             <View style={{backgroundColor:'purple',height:'95%', width:width-30, margin:5, borderRadius:10}}>
+                
 
             </View>
         )

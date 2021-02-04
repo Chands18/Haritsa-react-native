@@ -5,7 +5,7 @@ import {
   Text,
   View,
   Image,
-  FlatList
+  FlatList,
 } from 'react-native';
 import Gap from '../../Atoms/Gap';
 
@@ -51,31 +51,28 @@ const data = [
     price: 'Rp.1000',
   },
 ];
-const renderItem=(item,index) => {
-  console.log (item)
+const renderItem = (item, index) => {
+  console.log(item);
   return (
     <View>
       <View
         style={{
-          width:'100%',
-          paddingHorizontal:15,
-          paddingVertical:10,
-          marginLeft:6,
-          flexDirection:'row',
-          
+          width: '100%',
+          paddingVertical: 10,
+          flexDirection: 'row',
         }}>
         <Image
           source={{
             uri:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png',
           }}
-          style={{width:170, height: 170, backgroundColor:'beige'}}
+          style={{width: 170, height: 170, backgroundColor: 'beige'}}
         />
-        <View style={{padding:10, backgroundColor:'lavender', width:200}}>
+        <View style={{padding: 10, backgroundColor: 'lavender', width: '100%'}}>
           <Text>Nama Produk</Text>
-          <Text style={{marginTop:20}}>Rp 1.000</Text>
-          <Text style={{color:'red',left:150,bottom:21}}>50%</Text>
-          <Text style={{marginTop:40}}>20 Tersisa</Text>
+          <Text style={{marginTop: 20}}>Rp 1.000</Text>
+          <Text style={{color: 'red', left: 150, bottom: 21}}>50%</Text>
+          <Text style={{marginTop: 40}}>20 Tersisa</Text>
           <Image
             source={require('../../../assets/Icon/logo1.png')}
             style={{
@@ -91,7 +88,7 @@ const renderItem=(item,index) => {
       <Gap width={10} />
     </View>
   );
-}
+};
 const PromoCards = () => {
   return (
     <View
@@ -102,8 +99,12 @@ const PromoCards = () => {
         flexWrap: 'wrap',
         marginRight: 10,
       }}>
-      <FlatList numColumns={1} renderItem={renderItem} data={data} keyExtractor={(item,index)=>index.toString()} />
-        
+      <FlatList
+        numColumns={1}
+        renderItem={renderItem}
+        data={data}
+        keyExtractor={(item, index) => index.toString()}
+      />
     </View>
   );
 };
