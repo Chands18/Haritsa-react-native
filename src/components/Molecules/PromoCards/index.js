@@ -57,10 +57,9 @@ const renderItem=(item,index) => {
     <View>
       <View
         style={{
-          borderColor:'black',
           width:'100%',
-          paddingHorizontal:10,
-          paddingTop:10,
+          paddingHorizontal:15,
+          paddingVertical:10,
           marginLeft:6,
           flexDirection:'row',
           
@@ -68,13 +67,15 @@ const renderItem=(item,index) => {
         <Image
           source={{
             uri:
-              'https://i0.wp.com/www.lenterabisnis.com/wp-content/uploads/2018/07/atribut-produk.jpg?fit=600%2C400&ssl=1',
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png',
           }}
-          style={{width:170, height: 170}}
+          style={{width:170, height: 170, backgroundColor:'beige'}}
         />
         <View style={{padding:10, backgroundColor:'lavender', width:200}}>
           <Text>Nama Produk</Text>
-          <Text>Rp 1.000</Text>
+          <Text style={{marginTop:20}}>Rp 1.000</Text>
+          <Text style={{color:'red',left:150,bottom:21}}>50%</Text>
+          <Text style={{marginTop:40}}>20 Tersisa</Text>
           <Image
             source={require('../../../assets/Icon/logo1.png')}
             style={{
@@ -82,7 +83,7 @@ const renderItem=(item,index) => {
               height: 25,
               position: 'absolute',
               right: 10,
-              top: 20,
+              top: 110,
             }}
           />
         </View>

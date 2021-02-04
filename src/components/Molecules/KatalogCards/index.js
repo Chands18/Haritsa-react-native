@@ -68,7 +68,7 @@ const renderItem=(item,index) => {
         <Image
           source={{
             uri:
-              'https://i0.wp.com/www.lenterabisnis.com/wp-content/uploads/2018/07/atribut-produk.jpg?fit=600%2C400&ssl=1',
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png',
           }}
           style={{width: '100%', height: 170}}
         />
