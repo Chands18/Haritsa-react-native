@@ -109,6 +109,7 @@ const styles = StyleSheet.create({
     padding: 15,
     flexWrap: 'wrap',
     marginRight: -10,
+    marginBottom: 20
   },
 
   logo: {width: 20, height: 25, position: 'absolute', right: 10, top: 20},

@@ -1,7 +1,7 @@
 import React from 'react'
 import { ScrollView } from 'react-native'
 import { StyleSheet, Text, View } from 'react-native'
-import { Deskripsiproduk, DetailCards, HeaderDetail } from '../../components'
+import { Button, Deskripsiproduk, DetailCards, HeaderDetail } from '../../components'
 
 const DetailProduk = () => {
     return (
@@ -10,6 +10,7 @@ const DetailProduk = () => {
             <HeaderDetail/>
             <Deskripsiproduk/>
             <DetailCards/>
+            <Button/>
         </View>
         </ScrollView>
     )
