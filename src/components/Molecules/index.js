@@ -8,5 +8,6 @@ import PromoKatalog from './PromoKatalog'
 import KatalogCards from './KatalogCards'
 import HeaderPromo from './HeaderPromo'
 import KategoriPromo from './KategoriPromo'
+import HeaderDetail from './HeaderDetail'
 
-export {Layout,DiscountCard,Footer,NewsCard,HeaderKatalog,MenuKatalog,PromoKatalog,KatalogCards,HeaderPromo,KategoriPromo};
+export {Layout,DiscountCard,Footer,NewsCard,HeaderKatalog,MenuKatalog,PromoKatalog,KatalogCards,HeaderPromo,KategoriPromo,HeaderDetail};

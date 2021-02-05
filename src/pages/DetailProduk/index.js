@@ -1,10 +1,11 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import { HeaderDetail } from '../../components'
 
 const DetailProduk = () => {
     return (
         <View>
-            <Text>tesbhcbfhbv</Text>
+            <HeaderDetail/>
         </View>
     )
 }
