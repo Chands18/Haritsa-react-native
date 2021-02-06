@@ -1,10 +1,11 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import { HeaderKeranjang } from '../../components/Molecules'
 
 const KeranjangBelanja = () => {
     return (
         <View>
-            <Text>test</Text>
+            <HeaderKeranjang/>
         </View>
     )
 }
