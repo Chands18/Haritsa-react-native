@@ -3,7 +3,7 @@ import {Image} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {
-  Home, Katalog, Promo, DetailProduk, KeranjangBelanja, Brosur
+  Home, Katalog, Promo, DetailProduk, KeranjangBelanja, Brosur, Berkah
 } from '../pages';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 // import {icons} from '../assets';
@@ -80,6 +80,11 @@ const BottomTabNavigator = () => {
         name="Brosur"
         component={Brosur}
         options={{title: 'Brosur'}}
+      />
+      <Tab.Screen
+        name="Berkah"
+        component={Berkah}
+        options={{title: 'Berkah'}}
       />
 
 
