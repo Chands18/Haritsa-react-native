@@ -14,6 +14,8 @@ import DetailCards from './DetailCards';
 import HeaderKeranjang from './HeaderKeranjang';
 import DetailCart from './DetailCart';
 import BottomCard from './BottomCard';
+import HeaderBrosur from './HeaderBrosur';
+import BrosurContent from './BrosurContent';
 
 export {
   Layout,
@@ -32,4 +34,6 @@ export {
   HeaderKeranjang,
   DetailCart,
   BottomCard,
+  HeaderBrosur,
+  BrosurContent,
 };
