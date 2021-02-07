@@ -12,5 +12,6 @@ import HeaderDetail from './HeaderDetail'
 import Deskripsiproduk from './DeskripsiProduk'
 import DetailCards from './DetailCards'
 import HeaderKeranjang from './HeaderKeranjang'
+import DetailCart from './DetailCart'
 
-export {Layout,DiscountCard,Footer,NewsCard,HeaderKatalog,MenuKatalog,PromoKatalog,KatalogCards,HeaderPromo,KategoriPromo,HeaderDetail,Deskripsiproduk,DetailCards,HeaderKeranjang};
+export {Layout,DiscountCard,Footer,NewsCard,HeaderKatalog,MenuKatalog,PromoKatalog,KatalogCards,HeaderPromo,KategoriPromo,HeaderDetail,Deskripsiproduk,DetailCards,HeaderKeranjang,DetailCart};

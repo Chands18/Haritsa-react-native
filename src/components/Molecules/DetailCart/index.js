@@ -7,8 +7,10 @@ import {
   Image,
   FlatList,
 } from 'react-native';
+import { TextInput } from 'react-native-gesture-handler';
 import Gap from '../../Atoms/Gap';
 
+const {width} = Dimensions.get('window');
 const data = [
   {
     id: 1,
@@ -54,41 +56,42 @@ const data = [
 const renderItem = (item, index) => {
   console.log(item);
   return (
-    <View>
+    <View >
       <View
         style={{
-          width: '100%',
+          width,
           paddingVertical: 10,
           flexDirection: 'row',
+          backgroundColor:'honeydew',
+          borderRadius:10,
+          marginVertical: 6
         }}>
         <Image
           source={{
             uri:
               'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png',
           }}
-          style={{width: 170, height: 170, backgroundColor: 'beige'}}
+          style={{
+            width: 170,
+            height: 170,
+            backgroundColor: 'gold',
+            borderRadius: 10,
+            marginLeft:10
+          }}
         />
-        <View style={{padding: 10, backgroundColor: 'lavender', width: '100%', height:170}}>
-          <Text>Nama Produk</Text>
-          <Text style={{marginTop: 20}}>Rp 1.000</Text>
-          <Text style={{color: 'red', left: 150, bottom: 21}}>50%</Text>
-          <Text style={{marginTop: 40}}>20 Tersisa</Text>
-          <Image
-            source={require('../../../assets/Icon/logo1.png')}
-            style={{
-              width: 20,
-              height: 26,
-              marginLeft:150,
-              bottom: 27
-            }}
-          />
+        <View>
+          <Text style={{fontSize: 17, width}}>Nama Produk</Text>
+          <Text style={{marginTop: 20, fontSize: 17}}>Rp 10.000</Text>
+          <Text style={{color: 'black', marginLeft: 170, bottom: 20}}>1</Text>
+          <Text style={{marginLeft:169, bottom:90, fontSize:20}}>-</Text>
+          <Text style={{marginLeft:167, fontSize: 20}}>+</Text>
         </View>
       </View>
       <Gap width={10} />
     </View>
   );
 };
-const PromoCards = () => {
+const DetailCart = () => {
   return (
     <View
       style={{
@@ -108,6 +111,6 @@ const PromoCards = () => {
   );
 };
 
-export default PromoCards;
+export default DetailCart;
 
 const styles = StyleSheet.create({});
