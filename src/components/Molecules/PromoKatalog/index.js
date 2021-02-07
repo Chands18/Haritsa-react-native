@@ -37,7 +37,9 @@ export default function PromoKatalog() {
     return (
       <View
         style={{
-          backgroundColor: 'purple',
+          backgroundColor: 'white',
+          borderWidth:1,
+          borderColor:'pink',
           height: '95%',
           width: width - 30,
           margin: 5,

@@ -60,7 +60,7 @@ const renderItem = (item, index) => {
       <View
         style={{
           width,
-          paddingVertical: 10,
+          paddingVertical: 5,
           flexDirection: 'row',
           backgroundColor:'honeydew',
           borderRadius:10,
@@ -95,7 +95,7 @@ const DetailCart = () => {
   return (
     <View
       style={{
-        marginTop: 10,
+        marginTop: 5,
         flexDirection: 'column',
         paddingBottom:10,
         flexWrap: 'wrap',
@@ -116,6 +116,10 @@ const DetailCart = () => {
           <TextInput placeholder="Nama Anda" style={{borderBottomColor:'black', borderBottomWidth:0.7, marginHorizontal:8, fontStyle:'italic'}}></TextInput>
           <TextInput placeholder="No. HP WA Anda" style={{borderBottomColor:'black', borderBottomWidth:0.7, marginHorizontal:8, fontStyle:'italic'}}></TextInput>
           <TextInput placeholder="No. Kartu Member" style={{borderBottomColor:'black', borderBottomWidth:0.7, marginHorizontal:8, fontStyle:'italic'}}></TextInput>
+        </View>
+        <View style={{margin:10, height:45, flexDirection:'row', borderWidth:1, borderRadius:20, backgroundColor:'cyan', justifyContent:'center', alignItems:'center',  }}>
+          <Image style={{height:28, width:28}} source={require('../../../assets/Icon/logowa.png')}/>
+          <Text style={{fontStyle:'italic', fontWeight:'bold'  }}>Kirim Ke WA</Text>
         </View>
     </View>
   );
