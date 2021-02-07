@@ -56,7 +56,7 @@ const data = [
 const renderItem = (item, index) => {
   console.log(item);
   return (
-    <View >
+    <View>
       <View
         style={{
           width,
@@ -97,7 +97,7 @@ const DetailCart = () => {
       style={{
         marginTop: 10,
         flexDirection: 'column',
-        padding: 0,
+        paddingBottom:10,
         flexWrap: 'wrap',
         marginRight: 10,
       }}>
@@ -106,7 +106,17 @@ const DetailCart = () => {
         renderItem={renderItem}
         data={data}
         keyExtractor={(item, index) => index.toString()}
-      />
+        />
+        <View style={{flexDirection:'row',justifyContent:'space-evenly',padding:10, }}>
+          <Text>Item : ###</Text>
+          <Text>Total : Rp.###</Text>
+        </View>
+        <View style={{backgroundColor:'white', height:200, borderRadius:10}}>
+          <Text style={{fontStyle:'italic', textAlign:'right', right:10}}>No.order</Text>
+          <TextInput placeholder="Nama Anda" style={{borderBottomColor:'black', borderBottomWidth:0.7, marginHorizontal:8, fontStyle:'italic'}}></TextInput>
+          <TextInput placeholder="No. HP WA Anda" style={{borderBottomColor:'black', borderBottomWidth:0.7, marginHorizontal:8, fontStyle:'italic'}}></TextInput>
+          <TextInput placeholder="Nomer Kartu Member" style={{borderBottomColor:'black', borderBottomWidth:0.7, marginHorizontal:8, fontStyle:'italic'}}></TextInput>
+        </View>
     </View>
   );
 };
