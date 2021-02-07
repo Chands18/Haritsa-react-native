@@ -114,5 +114,5 @@ const styles = StyleSheet.create({
 
   logo: {width: 20, height: 25, position: 'absolute', right: 10, top: 20},
 
-  image: {width: '100%', height: 170},
+  image: {width: '100%', height: 170, borderWidth:1, borderColor:'pink'}
 });

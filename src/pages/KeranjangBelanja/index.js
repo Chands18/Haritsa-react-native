@@ -1,7 +1,7 @@
 import React from 'react'
 import { ScrollView } from 'react-native'
 import { StyleSheet, Text, View } from 'react-native'
-import { DetailCart, HeaderKeranjang } from '../../components/Molecules'
+import { BottomCard, DetailCart, HeaderKeranjang } from '../../components/Molecules'
 
 const KeranjangBelanja = () => {
     return (
@@ -9,6 +9,7 @@ const KeranjangBelanja = () => {
         <View style={styles.container}>
             <HeaderKeranjang/>
             <DetailCart/>
+            <BottomCard/>
         </View>
         </ScrollView>
     )

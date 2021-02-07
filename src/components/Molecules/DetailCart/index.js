@@ -115,7 +115,7 @@ const DetailCart = () => {
           <Text style={{fontStyle:'italic', textAlign:'right', right:10}}>No.order</Text>
           <TextInput placeholder="Nama Anda" style={{borderBottomColor:'black', borderBottomWidth:0.7, marginHorizontal:8, fontStyle:'italic'}}></TextInput>
           <TextInput placeholder="No. HP WA Anda" style={{borderBottomColor:'black', borderBottomWidth:0.7, marginHorizontal:8, fontStyle:'italic'}}></TextInput>
-          <TextInput placeholder="Nomer Kartu Member" style={{borderBottomColor:'black', borderBottomWidth:0.7, marginHorizontal:8, fontStyle:'italic'}}></TextInput>
+          <TextInput placeholder="No. Kartu Member" style={{borderBottomColor:'black', borderBottomWidth:0.7, marginHorizontal:8, fontStyle:'italic'}}></TextInput>
         </View>
     </View>
   );
