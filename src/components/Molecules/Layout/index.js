@@ -23,7 +23,7 @@ const dummies = [
 export default function Layout() {
     const renderItem=({item,index})=>{
         return(
-            <View style={{width:100,marginRight:10,alignItems:'center'}}>
+            <View style={{width:106,marginRight:10,alignItems:'center'}}>
             <DiscountCard>
                 <Text>{item.text}</Text>
             </DiscountCard>
@@ -43,10 +43,10 @@ export default function Layout() {
         <View style={styles.container}>
             <Text style={styles.text}>Promo Di Bulan Ini</Text>
                 <View style={{marginTop:10, justifyContent:'center',alignItems:'center' ,width:'100%'}}>
-                    <FlatList scrollEnabled={false} data={dummies} numColumns={3} style={{height:200}} renderItem={renderItem} keyExtractor={(item,index)=>index.toString()} />
+                    <FlatList scrollEnabled={false} data={dummies} numColumns={3} style={{height:120}} renderItem={renderItem} keyExtractor={(item,index)=>index.toString()} />
                 </View>
                 <View >
-                    <FlatList scrollEnabled={true} data={dummies} horizontal style={{marginTop:10,height:100,width:'100%'}} renderItem={renderItem2} keyExtractor={(item,index)=>index.toString()} />
+                    <FlatList scrollEnabled={true} data={dummies} horizontal style={{height:129,width:'100%'}} renderItem={renderItem2} keyExtractor={(item,index)=>index.toString()} />
                 </View>
         </View>
     )
