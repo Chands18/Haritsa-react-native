@@ -4,7 +4,7 @@ import { ScrollView, TextInput } from 'react-native-gesture-handler'
 
 export default function HeaderKatalog() {
     return (
-        <View style={{backgroundColor:'white',height:60}}>
+        <View style={{backgroundColor:'lavender',height:60}}>
             <View style={{flexDirection:'row', paddingTop:15, marginHorizontal:20,width:'100%'}}>
                 <View style={{position:'relative', flex:1}}>
                 <TextInput placeholder="Search Data" style={{borderWidth:1, borderColor:'red',borderRadius:10,height:40,fontSize:13,backgroundColor:'white', textAlign:'center'}}/>

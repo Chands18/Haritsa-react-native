@@ -39,7 +39,7 @@ export default function PromoKatalog() {
         style={{
           backgroundColor: 'white',
           borderWidth:1,
-          borderColor:'pink',
+          borderColor:'red',
           height: '95%',
           width: width - 30,
           margin: 5,
@@ -67,16 +67,13 @@ export default function PromoKatalog() {
           keyExtractor={(item, index) => index.toString()}
         />
       </View>
-      <Text style={{textAlign: 'right', marginRight: 20, color: 'grey'}}>
-        Lihat Detail
-      </Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 20,
+    marginVertical: 10,
     paddingVertical: 10,
     paddingHorizontal: 10,
     width: '100%',
