@@ -73,7 +73,6 @@ export default function PromoKatalog() {
 
 const styles = StyleSheet.create({
   container: {
-    marginVertical: 10,
     paddingVertical: 10,
     paddingHorizontal: 10,
     width: '100%',

@@ -3,18 +3,9 @@ import { StyleSheet, Text, View, Image } from 'react-native'
 
 const HeaderPromo = () => {
     return (
-        <View style={{backgroundColor:'lavender',height:200}}> 
-            <View style={{paddingTop:15}}>
-                <View style={{flex:1}}>
-                <Image source={require('../../../assets/Icon/BackIcon.png')} style={{position:'absolute', top:10, left:15}}/>
-                </View>
-                <View style={{width:60,marginHorizontal:180}}>
-                    <Text style={{fontSize:18,fontWeight:'bold', justifyContent:'center',top:7}}>Promo</Text>
-                </View>
-            </View>
-            <Text style={{paddingLeft:20,paddingTop:110, fontSize:11}}>
-                slide show berita
-            </Text>
+        <View style={{backgroundColor:'deeppink',height:60, flexDirection:'row', justifyContent:'flex-start', alignItems:'center', width:'100%'}}> 
+            <Image source={require('../../../assets/Icon/Vector.png')}/>
+            <Text style={{fontSize:18,fontWeight:'bold', textAlign:'center',left:15, color:'white' }}>Promo Discount 50%</Text>
         </View>
     )
 }

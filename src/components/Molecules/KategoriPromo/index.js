@@ -4,7 +4,6 @@ import { StyleSheet, Text, View } from 'react-native'
 export default function KategoriPromo() {
     return (
         <View style={{backgroundColor:'white'}}>
-            <Text style={{fontSize:15, fontWeight:'bold',paddingLeft:10 }}>Kategori Promo</Text>
             <View style={{flexDirection:'row', flexWrap:'wrap',marginHorizontal:16, marginTop:25}}>
                 <View style={{justifyContent:'space-between', flexDirection:'row', width:'100%', marginBottom:18}}>
                     <View>

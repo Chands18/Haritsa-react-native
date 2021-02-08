@@ -9,8 +9,8 @@ export default function Katalog({navigation}) {
     return (
         <ScrollView style={{width:'100%', height:'100%'}}>
             <View style={styles.container}>
+                <HeaderKatalog/>
                 <PromoKatalog/>
-                {/* <HeaderKatalog/> */}
                 <MenuKatalog/>
                 <KatalogCards/>
             </View>

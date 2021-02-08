@@ -55,9 +55,9 @@ const change = ({nativeEvent}) => {
 export default HeaderDetail;
 
 const styles = StyleSheet.create({
-    container: {width, height},
+    container: {width:100, height:130,},
     scroll: {width, height},
-    image: {width, height, resizeMode: 'cover'},
+    image: {width, height, resizeMode: 'cover', borderRadius:10},
     pagination: {flexDirection:'row', position:'absolute', bottom:0, alignSelf:'center'},
     pagingText: {color:'#888', margin: 3},
     pagingActiveText: {color:'#fff', margin: 3}
