@@ -44,12 +44,13 @@ export default function PromoKatalog() {
           width: width - 30,
           margin: 5,
           borderRadius: 10,
+          elevation:5
         }}></View>
     );
   };
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Promo Di Bulan Ini</Text>
+      <Text style={styles.text}>Promo This Month</Text>
       <View
         style={{
           marginTop: 10,

@@ -66,10 +66,7 @@ const renderItem=(item,index) => {
           
         }}>
         <Image
-          source={{
-            uri:
-              'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png',
-          }}
+          source={require('../../../assets/images/produk-131.png')}
           style={{width: '100%', height: 170, borderWidth:1, borderColor:'pink'}}
         />
         <View style={{padding:10, backgroundColor:'white'}}>
