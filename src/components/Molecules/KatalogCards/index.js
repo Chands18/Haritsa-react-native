@@ -72,19 +72,19 @@ const renderItem=(item,index) => {
           }}
           style={{width: '100%', height: 170, borderWidth:1, borderColor:'pink'}}
         />
-        <View style={{padding:10, backgroundColor:'lavender'}}>
+        <View style={{padding:10, backgroundColor:'white'}}>
           <Text>Nama Produk</Text>
           <Text>Rp 1.000</Text>
+        </View>
+        <View style={{padding:10, backgroundColor:'deeppink', borderRadius:6, flexDirection:'row', justifyContent:'space-evenly'}}>
           <Image
-            source={require('../../../assets/Icon/logo1.png')}
+            source={require('../../../assets/Icon/hrtsicon.png')}
             style={{
               width: 20,
               height: 25,
-              position: 'absolute',
-              right: 10,
-              top: 20,
             }}
           />
+            <Text style={{fontWeight:'bold', color:'white',}}>Add to Cart</Text>
         </View>
       </View>
       <Gap width={10} />
@@ -102,7 +102,7 @@ const KatalogCards = () => {
         flexWrap: 'wrap',
         marginRight: -10,
       }}>
-      <Text style={{fontWeight:'bold'}}>Produk</Text>
+      <Text style={{fontWeight:'bold'}}>Products</Text>
       <FlatList numColumns={2} renderItem={renderItem} data={data} keyExtractor={(item,index)=>index.toString()} />
         
     </View>
