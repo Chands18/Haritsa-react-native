@@ -20,7 +20,7 @@ const dummies = [
 export default function Footer() {
         const renderItem=({item,index})=>{
             return(
-                <View style={{width:100,marginRight:10,alignItems:'center'}}>
+                <View style={{width:108, marginRight:10,alignItems:'center'}}>
                 <NewsCard>
                     <Text>{item.text}</Text>
                 </NewsCard>

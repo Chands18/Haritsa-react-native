@@ -11,14 +11,8 @@ export default function HeaderKatalog() {
                 <Image source={require('../../../assets/Icon/search.png')} style={{position:'absolute', top:10, right:20}}/>
                 </View>
                 <View style={{width:35,alignItems:'center',justifyContent:'center',bottom:0}}>
-                    <Image source={require('./../../../assets/Icon/logo1.png')}/>
                 </View>
             </View>
-            <View>
-            </View>
-            <Text style={{paddingLeft:20,paddingTop:110, fontSize:11}}>
-                slide show berita
-            </Text>
         </View>
     )
 }

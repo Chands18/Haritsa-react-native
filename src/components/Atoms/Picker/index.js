@@ -6,8 +6,7 @@ state = {
     language: 'java',
   };
 const items =[
-    {label: 'Pilih Toko', value: 'pilih toko'},
-    {label: 'UK', value: 'uk'},
+    {label: 'Pematang Siantar', value: 'PMS'},
     {label: 'France', value: 'france'},
 ]
 export const Pickers = () => {
@@ -27,7 +26,7 @@ export const Pickers = () => {
 
         <TouchableOpacity
             style={{height:'100%',width:'15%',backgroundColor:'white', borderRadius:5}}>
-                <Text style={{textAlign:'center',textAlignVertical:'center' ,height:'100%', color:'blue', fontWeight:'bold',fontSize:20}}>Go</Text>
+                <Text style={{textAlign:'center',textAlignVertical:'center' ,height:'100%', color:'grey', fontWeight:'bold',fontSize:20}}>Go</Text>
         </TouchableOpacity>    
     </View>
   );

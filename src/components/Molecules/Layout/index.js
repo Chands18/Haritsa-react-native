@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, FlatList, Dimensions } from 'react-native'
+import { StyleSheet, Text, View, FlatList, Dimensions, Image } from 'react-native'
 import { DiscountCard } from '..'
 import { images } from '../../../assets';
 
@@ -8,15 +8,12 @@ const {width,height}=Dimensions.get('window');
 const dummies = [
     {
         id:1,
-        text:'Diskon 1'
     },
     {
         id:2,
-        text:'Diskon 2'
     },
     {
         id:3,
-        text:'Diskon 3'
     },
 ]
 
@@ -35,13 +32,12 @@ export default function Layout() {
         return(
             <View style={{backgroundColor:'white',borderWidth:1, borderColor:'pink', height:'95%', width:width-30, margin:5, borderRadius:10}}>
                 
-
             </View>
         )
     }
     return (   
         <View style={styles.container}>
-            <Text style={styles.text}>Promo Di Bulan Ini</Text>
+            <Text style={styles.text}>Promo This Month</Text>
                 <View style={{marginTop:10, justifyContent:'center',alignItems:'center' ,width:'100%'}}>
                     <FlatList scrollEnabled={false} data={dummies} numColumns={3} style={{height:120}} renderItem={renderItem} keyExtractor={(item,index)=>index.toString()} />
                 </View>
