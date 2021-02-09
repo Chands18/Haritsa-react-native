@@ -16,7 +16,8 @@ import DetailCart from './DetailCart';
 import BottomCard from './BottomCard';
 import HeaderBrosur from './HeaderBrosur';
 import BrosurContent from './BrosurContent';
-import BerkahContent from './BerkahContent'
+import BerkahContent from './BerkahContent';
+import PromoSlider from './PromoSlider';
 
 export {
   Layout,
@@ -37,5 +38,6 @@ export {
   BottomCard,
   HeaderBrosur,
   BrosurContent,
-  BerkahContent
+  BerkahContent,
+  PromoSlider
 };

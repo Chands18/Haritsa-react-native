@@ -9,7 +9,7 @@ export default function KategoriPromo() {
                 <View style={{justifyContent:'space-between', flexDirection:'row', width:'100%', marginBottom:15,}}>
                     <View>
                     <View style={{width:58, height:58, elevation:10 }}>
-                        <Image style={{borderRadius:5}} resizeMode='cover' source={images.img_bayi1}/>
+                        <Image style={{borderRadius:5,}} resizeMode='cover' source={images.img_bayi1}/>
                     </View>
                         <Text style={{fontSize:11, textAlign:'center', marginTop:6}}>Kategori</Text>
                     </View>
