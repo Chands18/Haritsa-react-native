@@ -5,114 +5,73 @@ import {
   Text,
   View,
   Image,
-  FlatList,
+  FlatList
 } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { dummiesProduct, icons } from '../../../assets';
+import { FormatCurrency } from '../../../utils';
 import Gap from '../../Atoms/Gap';
 
-const data = [
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-];
-const renderItem = (item, index) => {
-  console.log(item);
+
+const renderItem=(item,index) => {
+  console.log (item)
   return (
     <View>
-      <View style={styles.container}>
-        <Image
-          source={{
-            uri:
-              'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png',
-          }}
-          style={styles.image}
-        />
-        <View style={{padding: 10, backgroundColor: 'lavender'}}>
-          <Text>Nama Produk</Text>
-          <Text>Rp 1.000</Text>
+        <View
+          style={{
+            marginTop: 10,
+            width:180,
+            paddingHorizontal:10,
+            paddingTop:10,
+            marginLeft:6,
+            borderWidth:1,
+            borderRadius:10,
+            borderColor:'lightgrey',
+          }}>
           <Image
-            source={require('../../../assets/Icon/logo1.png')}
-            style={styles.logo}
+            source={item.item.image}
+            style={{width: '100%', height: 170,}}
           />
+          <View style={{padding:10, backgroundColor:'white'}}>
+            <Text>{item.item.name}</Text>
+            <Text>{FormatCurrency({num:item.item.price})}</Text>
+          </View>
+          <View>
+            <TouchableOpacity>
+              <View style={{padding:10,elevation:0,width:150,alignSelf:'center', backgroundColor:'deeppink', borderRadius:10, flexDirection:'row', justifyContent:'space-evenly'}}>
+                <Image
+                  source={icons.ic_logo}
+                  style={{
+                    width: 20,
+                    height: 25,
+                  }}
+                />
+                  <Text style={{fontWeight:'bold', color:'white',}}>Add to Cart</Text>
+              </View>
+              </TouchableOpacity>
+              </View>    
         </View>
-      </View>
-      <Gap width={10} />
+        <Gap width={10} />
     </View>
   );
-};
+}
 const DetailCards = () => {
   return (
-    <View style={styles.container2}>
-      <Text style={{fontWeight: 'bold'}}>Produk</Text>
-      <FlatList
-        numColumns={2}
-        renderItem={renderItem}
-        data={data}
-        keyExtractor={(item, index) => index.toString()}
-      />
+    <View
+      style={{
+        backgroundColor: 'white',
+        marginTop: 10,
+        flexDirection: 'column',
+        padding: 15,
+        flexWrap: 'wrap',
+      }}>
+      <Text style={{fontWeight:'bold'}}>Related Products</Text>
+      <FlatList numColumns={2} renderItem={renderItem} data={dummiesProduct} keyExtractor={(item,index)=>index.toString()} />
+        
     </View>
   );
 };
 
 export default DetailCards;
 
-const styles = StyleSheet.create({
-  container: {
-    marginTop: 10,
-    borderColor: 'black',
-    width: 180,
-    paddingHorizontal: 10,
-    paddingTop: 10,
-    marginLeft: 6,
-  },
-
-  container2: {
-    backgroundColor: 'white',
-    marginTop: 20,
-    flexDirection: 'column',
-    padding: 15,
-    flexWrap: 'wrap',
-    marginRight: -10,
-    marginBottom: 20
-  },
-
-  logo: {width: 20, height: 25, position: 'absolute', right: 10, top: 20},
-
-  image: {width: '100%', height: 170, borderWidth:1, borderColor:'pink'}
-});
+const styles = StyleSheet.create({});

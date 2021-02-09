@@ -38,7 +38,7 @@ const renderItem=(item,index) => {
           </View>
           <View>
             <TouchableOpacity>
-              <View style={{padding:10,elevation:0,width:167,right:4, bottom:5, backgroundColor:'deeppink', borderRadius:10, flexDirection:'row', justifyContent:'space-evenly'}}>
+              <View style={{padding:10, elevation:0, width:150, alignSelf:'center',backgroundColor:'deeppink', borderRadius:10, flexDirection:'row', justifyContent:'space-evenly'}}>
                 <Image
                   source={icons.ic_logo}
                   style={{
