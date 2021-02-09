@@ -1,5 +1,8 @@
 import React from 'react'
 import { StyleSheet, Text, View, TextInput, Image } from 'react-native'
+import { images } from '../../../assets'
+
+
 
 export default function MenuKatalog() {
     return (
@@ -15,46 +18,66 @@ export default function MenuKatalog() {
             <View style={{flexDirection:'row', flexWrap:'wrap',marginHorizontal:16, marginTop:25}}>
                 <View style={{justifyContent:'space-between', flexDirection:'row', width:'100%', marginBottom:18,}}>
                     <View>
-                    <View style={{width:58, height:58, borderWidth:1, borderColor:'red', borderRadius:10, }}></View>
-                        <Text style={{fontSize:11, fontWeight:'bold', textAlign:'center', marginTop:6}}>Kategori 1</Text>
+                    <View style={{width:58, height:58, elevation:10 }}>
+                        <Image style={{borderRadius:5}} resizeMode='cover' source={images.img_bayi}/>
+                    </View>
+                        <Text style={{fontSize:11, textAlign:'center', marginTop:6}}>Kategori </Text>
                     </View>
                     <View>
-                    <View style={{width:58, height:58, borderWidth:1, borderColor:'red', borderRadius:10, }}></View>
-                        <Text style={{fontSize:11, fontWeight:'bold', textAlign:'center', marginTop:6}}>Kategori 2</Text>
+                    <View style={{width:58, height:58, elevation:10 }}>
+                        <Image style={{borderRadius:5}} resizeMode='cover' source={images.img_bayi1}/>
+                    </View>
+                        <Text style={{fontSize:11, textAlign:'center', marginTop:6}}>Kategori</Text>
                     </View>
                     <View>
-                    <View style={{width:58, height:58, borderWidth:1, borderColor:'red', borderRadius:10, }}></View>
-                        <Text style={{fontSize:11, fontWeight:'bold', textAlign:'center', marginTop:6}}>Kategori 3</Text>
+                    <View style={{width:58, height:58, elevation:10 }}>
+                        <Image style={{borderRadius:5}} resizeMode='cover' source={images.img_bayi2}/>
+                    </View>
+                        <Text style={{fontSize:11, textAlign:'center', marginTop:6}}>Kategori</Text>
                     </View>
                     <View>
-                    <View style={{width:58, height:58, borderWidth:1, borderColor:'red', borderRadius:10, }}></View>
-                        <Text style={{fontSize:11, fontWeight:'bold', textAlign:'center', marginTop:6}}>Kategori 4</Text>
+                    <View style={{width:58, height:58, elevation:10}}>
+                        <Image style={{borderRadius:5}} resizeMode='cover' source={images.img_bayi3}/>
+                    </View>
+                        <Text style={{fontSize:11,  textAlign:'center', marginTop:6}}>Kategori</Text>
                     </View>
                     <View>
-                    <View style={{width:58, height:58, borderWidth:1, borderColor:'red', borderRadius:10, }}></View>
-                        <Text style={{fontSize:11, fontWeight:'bold', textAlign:'center', marginTop:6}}>Kategori 5</Text>
+                    <View style={{width:58, height:58, elevation:10 }}>
+                        <Image style={{borderRadius:5}} resizeMode='cover' source={images.img_bayi4}/>
+                    </View>
+                        <Text style={{fontSize:11,  textAlign:'center', marginTop:6}}>Kategori</Text>
                     </View>
                 </View>
                 <View style={{justifyContent:'space-between', flexDirection:'row', width:'100%', marginBottom:18}}>
                     <View>
-                    <View style={{width:58, height:58, borderWidth:1, borderColor:'red', borderRadius:10, }}></View>
-                        <Text style={{fontSize:11, fontWeight:'bold', textAlign:'center', marginTop:6}}>Kategori 6</Text>
+                    <View style={{width:58, height:58, elevation:10 }}>
+                        <Image style={{borderRadius:5}} resizeMode='cover' source={images.img_bayi}/>
+                    </View>
+                        <Text style={{fontSize:11, textAlign:'center', marginTop:6}}>Kategori</Text>
                     </View>
                     <View>
-                    <View style={{width:58, height:58, borderWidth:1, borderColor:'red', borderRadius:10, }}></View>
-                        <Text style={{fontSize:11, fontWeight:'bold', textAlign:'center', marginTop:6}}>Kategori 7</Text>
+                    <View style={{width:58, height:58, elevation:10 }}>
+                        <Image style={{borderRadius:5}} resizeMode='cover' source={images.img_bayi1}/>
+                    </View>
+                        <Text style={{fontSize:11, textAlign:'center', marginTop:6}}>Kategori</Text>
                     </View>
                     <View>
-                    <View style={{width:58, height:58, borderWidth:1, borderColor:'red', borderRadius:10, }}></View>
-                        <Text style={{fontSize:11, fontWeight:'bold', textAlign:'center', marginTop:6}}>Kategori 8</Text>
+                    <View style={{width:58, height:58, elevation:10 }}>
+                        <Image style={{borderRadius:5}} resizeMode='cover' source={images.img_bayi2}/>
+                    </View>
+                        <Text style={{fontSize:11, textAlign:'center', marginTop:6}}>Kategori</Text>
                     </View>
                     <View>
-                    <View style={{width:58, height:58, borderWidth:1, borderColor:'red', borderRadius:10, }}></View>
-                        <Text style={{fontSize:11, fontWeight:'bold', textAlign:'center', marginTop:6}}>Kategori 9</Text>
+                    <View style={{width:58, height:58, elevation:10}}>
+                        <Image style={{borderRadius:5}} resizeMode='cover' source={images.img_bayi3}/>
+                    </View>
+                        <Text style={{fontSize:11, textAlign:'center', marginTop:6}}>Kategori</Text>
                     </View>
                     <View>      
-                    <View style={{width:58, height:58, borderWidth:1, borderColor:'red', borderRadius:10, }}></View>
-                        <Text style={{fontSize:11, fontWeight:'bold', textAlign:'center', marginTop:6}}>Kategori 10</Text>
+                    <View style={{width:58, height:58, elevation:10}}>
+                        <Image style={{borderRadius:5}} resizeMode='cover' source={images.img_bayi4}/>
+                    </View>
+                        <Text style={{fontSize:11, textAlign:'center', marginTop:6}}>Kategori</Text>
                     </View>
                 </View>   
             </View>

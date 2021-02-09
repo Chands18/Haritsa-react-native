@@ -8,4 +8,9 @@ export const images={
     img_produk6:require('./promo-4.png'),
     img_produk7:require('./promo-6.png'),
     img_produk8:require('./promo-5.png'),
+    img_bayi:require('./makanan-bayi.png'),
+    img_bayi1:require('./perlengkapan-mandi.png'),
+    img_bayi2:require('./perlengkapan-tidur.png'),
+    img_bayi3:require('./mainan-bayi.png'),
+    img_bayi4:require('./diapers-susu.png'),
 }

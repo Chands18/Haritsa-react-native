@@ -7,6 +7,7 @@ import {
   Image,
   FlatList
 } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import { dummiesProduct, icons } from '../../../assets';
 import { FormatCurrency } from '../../../utils';
 import Gap from '../../Atoms/Gap';
@@ -35,16 +36,20 @@ const renderItem=(item,index) => {
             <Text>{item.item.name}</Text>
             <Text>{FormatCurrency({num:item.item.price})}</Text>
           </View>
-          <View style={{padding:10,elevation:10,width:167,right:4, bottom:5, backgroundColor:'deeppink', borderRadius:6, flexDirection:'row', justifyContent:'space-evenly'}}>
-            <Image
-              source={icons.ic_logo}
-              style={{
-                width: 20,
-                height: 25,
-              }}
-            />
-              <Text style={{fontWeight:'bold', color:'white',}}>Add to Cart</Text>
-          </View>
+          <View>
+            <TouchableOpacity>
+              <View style={{padding:10,elevation:0,width:167,right:4, bottom:5, backgroundColor:'deeppink', borderRadius:6, flexDirection:'row', justifyContent:'space-evenly'}}>
+                <Image
+                  source={icons.ic_logo}
+                  style={{
+                    width: 20,
+                    height: 25,
+                  }}
+                />
+                  <Text style={{fontWeight:'bold', color:'white',}}>Add to Cart</Text>
+              </View>
+              </TouchableOpacity>
+              </View>    
         </View>
         <Gap width={10} />
     </View>
