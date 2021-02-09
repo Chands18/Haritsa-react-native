@@ -5,105 +5,67 @@ import {
   Text,
   View,
   Image,
-  FlatList,
+  FlatList
 } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { dummiesDiscount, icons } from '../../../assets';
+import { FormatCurrency } from '../../../utils';
 import Gap from '../../Atoms/Gap';
 
-const data = [
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-];
-const renderItem = (item, index) => {
-  console.log(item);
+
+const renderItem=(item,index) => {
+  console.log (item)
   return (
-    <View>
-      <View
-        style={{
-          width: '100%',
-          paddingVertical: 10,
-          flexDirection: 'row',
-        }}>
-        <Image
-          source={{
-            uri:
-              'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png',
-          }}
-          style={{width: 170, height: 170, backgroundColor: 'beige'}}
-        />
-        <View style={{padding: 10, backgroundColor: 'lavender', width: '100%', height:170}}>
-          <Text>Nama Produk</Text>
-          <Text style={{marginTop: 20}}>Rp 1.000</Text>
-          <Text style={{color: 'red', left: 150, bottom: 21}}>50%</Text>
-          <Text style={{marginTop: 40}}>20 Tersisa</Text>
+    <View style={{backgroundColor:'lightgrey', width:500}}>
+        <View
+          style={{
+            marginVertical: 4,
+            width:180,
+            paddingHorizontal:10,
+            marginHorizontal:5,
+            flexDirection:'row',
+            backgroundColor:'white',
+            borderRadius:10
+          }}>
           <Image
-            source={require('../../../assets/Icon/logo1.png')}
-            style={{
-              width: 20,
-              height: 26,
-              marginLeft:150,
-              bottom: 27
-            }}
+            source={item.item.image}
+            style={{width: '100%', height:'100%', borderRadius:10}}
           />
+          <View style={{backgroundColor:'white', width:220, left:10,height:200,borderRadius:10}}>
+          <View style={{marginLeft:15, marginTop:5, position:'relative'}}>
+            <Text>{item.item.name}</Text>
+            <Text style={{textDecorationLine:'line-through'}}>{FormatCurrency({num:item.item.price})}</Text>
+            <Text style={{color:'red',left:100, bottom: 22 }}>{FormatCurrency({num:item.item.price})}</Text>
+            <Text>{item.item.stock}</Text>
+          </View>
+          <View style={{marginTop:55, alignItems:'center'}}>
+            <TouchableOpacity>
+              <View style={{padding:10,width:200, backgroundColor:'deeppink', borderRadius:10, flexDirection:'row', justifyContent:'space-evenly'}}>
+                <Image
+                  source={icons.ic_logo}
+                  style={{
+                    width: 20,
+                    height: 25,
+                  }}
+                />
+                  <Text style={{fontWeight:'bold', color:'white',}}>Add to Cart</Text>
+              </View>
+              </TouchableOpacity>
+              </View>
+              </View>    
         </View>
-      </View>
-      <Gap width={10} />
+        <Gap width={10} />
     </View>
   );
-};
+}
 const PromoCards = () => {
   return (
     <View
       style={{
-        marginTop: 10,
         flexDirection: 'column',
-        padding: 0,
         flexWrap: 'wrap',
-        marginRight: 10,
       }}>
-      <FlatList
-        numColumns={1}
-        renderItem={renderItem}
-        data={data}
-        keyExtractor={(item, index) => index.toString()}
-      />
+      <FlatList numColumns={1} renderItem={renderItem} data={dummiesDiscount} keyExtractor={(item,index)=>index.toString()} /> 
     </View>
   );
 };

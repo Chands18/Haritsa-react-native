@@ -13,7 +13,7 @@ export const dummiesProduct =[
     {
         image:images.img_produk,
         price:3000,
-        name:'brownies'
+        name:'brownies',
     },
     {
         image:images.img_produk,
@@ -39,5 +39,44 @@ export const dummiesProduct =[
         image:images.img_produk,
         price:9000,
         name:'coklat'
+    },
+]
+
+export const dummiesDiscount =[
+    {
+        image:images.img_produk,
+        price:3000,
+        name:'greentea',
+        stock:'Stock tersisa:10'
+    },
+    {
+        image:images.img_produk,
+        price:5000,
+        name:'krekers',
+        stock:'Stock tersisa:10'
+    },
+    {
+        image:images.img_produk,
+        price:6000,
+        name:'nastar',
+        stock:'Stock tersisa:10'
+    },
+    {
+        image:images.img_produk,
+        price:7000,
+        name:'kue',
+        stock:'Stock tersisa:10'
+    },
+    {
+        image:images.img_produk,
+        price:8000,
+        name:'bubur',
+        stock:'Stock tersisa:10'
+    },
+    {
+        image:images.img_produk,
+        price:9000,
+        name:'coklat',
+        stock:'Stock tersisa:10'
     },
 ]
