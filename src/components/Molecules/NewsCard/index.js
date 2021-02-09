@@ -11,11 +11,9 @@ export const NewsCard =({children})=>{
 const styles = StyleSheet.create({
     container:{
         backgroundColor: 'transparent',
-        borderColor:'red',
-        borderWidth:0.5,
         width:'100%', 
-        height: 150, 
-        borderRadius:8,
+        height: 120, 
+        borderRadius:9,
         alignItems:'center',
         justifyContent:'flex-end'
     }

@@ -1,6 +1,7 @@
 import React from 'react'
-import { StyleSheet, Text, View, FlatList} from 'react-native'
+import { StyleSheet, Text, View, FlatList, Image} from 'react-native'
 import { NewsCard } from '..' ;
+import { dummiesBerkah, dummiesProduk } from '../../../assets';
 
 const dummies = [
     {
@@ -22,7 +23,7 @@ export default function Footer() {
             return(
                 <View style={{width:108, marginRight:10,alignItems:'center'}}>
                 <NewsCard>
-                    <Text>{item.text}</Text>
+                <Image resizeMode='cover' style={{flex:1, borderRadius:10}} source={item}/>
                 </NewsCard>
                 </View>
             )
@@ -32,7 +33,7 @@ export default function Footer() {
                 <View style={styles.container}> 
                     <Text style={styles.text}>Berkah</Text>
                     <View style={{marginTop:10, justifyContent:'center',alignItems:'center' ,width:'100%'}}>
-                    <FlatList data={dummies} numColumns={3} style={{height:200}} renderItem={renderItem} keyExtractor={(_item,index)=>index.toString()} />
+                    <FlatList data={dummiesBerkah} numColumns={3} style={{height:200}} renderItem={renderItem} keyExtractor={(_item,index)=>index.toString()} />
                 </View>
                 </View>
             )
