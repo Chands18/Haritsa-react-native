@@ -18,6 +18,7 @@ import HeaderBrosur from './HeaderBrosur';
 import BrosurContent from './BrosurContent';
 import BerkahContent from './BerkahContent';
 import PromoSlider from './PromoSlider';
+import DetailSlider from './DetailSlider';
 
 export {
   Layout,
@@ -39,5 +40,6 @@ export {
   HeaderBrosur,
   BrosurContent,
   BerkahContent,
-  PromoSlider
+  PromoSlider,
+  DetailSlider
 };
