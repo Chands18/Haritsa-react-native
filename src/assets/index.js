@@ -1,3 +1,4 @@
-export const images = {
-    img_Logo:require ('./images/Haritsa-Logo.png') 
-}
+export * from './Dummy'
+export * from './Icon'
+export * from './images'
+export * from './Illustration'

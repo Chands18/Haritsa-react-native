@@ -1,87 +1,66 @@
 import React from 'react';
-import {StyleSheet, Text, View, FlatList, Dimensions} from 'react-native';
-import {DiscountCard} from '..';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  ScrollView,
+  Dimensions,
+} from 'react-native';
+import { useState } from 'react';
 
-const {width, height} = Dimensions.get('window');
-const dummies = [
-  {
-    id: 1,
-    text: '',
-  },
-  {
-    id: 2,
-    text: '',
-  },
-  {
-    id: 3,
-    text: '',
-  },
-  {
-    id: 4,
-    text: '',
-  },
+const {width} = Dimensions.get('window');
+const height = width * 0.6;
+const images = [
+  'https://images.pexels.com/photos/4686960/pexels-photo-4686960.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+  'https://images.pexels.com/photos/6152257/pexels-photo-6152257.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+  'https://images.pexels.com/photos/6152258/pexels-photo-6152258.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+  'https://images.pexels.com/photos/5907862/pexels-photo-5907862.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
+  'https://images.pexels.com/photos/6009226/pexels-photo-6009226.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
 ];
 
-export default function PromoKatalog() {
-  const renderItem = ({item, index}) => {
-    return (
-      <View style={{width: 100, marginRight: 10, alignItems: 'center'}}>
-        <DiscountCard>
-          <Text>{item.text}</Text>
-        </DiscountCard>
-      </View>
-    );
-  };
+const PromoKatalog = () => {
+const [active,setActive] = useState(0)
 
-  const renderItem2 = ({item, index}) => {
-    return (
-      <View
-        style={{
-          backgroundColor: 'white',
-          borderWidth:1,
-          borderColor:'red',
-          height: '95%',
-          width: width - 30,
-          margin: 5,
-          borderRadius: 10,
-          elevation:5
-        }}></View>
-    );
-  };
+const change = ({nativeEvent}) => {
+    const slide = Math.ceil(nativeEvent.contentOffset.x / nativeEvent.layoutMeasurement.width);
+    if(slide !== active){
+        setActive(slide);
+    }
+}
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Promo This Month</Text>
-      <View
-        style={{
-          marginTop: 10,
-          justifyContent: 'center',
-          alignItems: 'center',
-          width: '100%',
-        }}></View>
-      <View>
-        <FlatList
-          scrollEnabled={true}
-          data={dummies}
-          horizontal
-          style={{marginTop: 10, height: 100, width: '100%'}}
-          renderItem={renderItem2}
-          keyExtractor={(item, index) => index.toString()}
-        />
+    <View style={{backgroundColor:'white'}}>
+      <View style={styles.container}>
+        <ScrollView pagingEnabled horizontal onScroll={change} showsHorizontalScrollIndicator={false} style={styles.scroll}>
+          {images.map((image, index) => (
+            <Image
+              key={index}
+              source={{
+                uri: image,
+              }}
+              style={styles.image}
+            />
+          ))}
+        </ScrollView>
+        <View style={styles.pagination}>
+            {
+                images.map((i,k) => (
+                    <Text key={k} style={k==active ? styles.pagingActiveText : styles.pagingText}>⬤</Text>
+                ))
+            }
+        </View>
       </View>
     </View>
   );
-}
+};
+
+export default PromoKatalog;
 
 const styles = StyleSheet.create({
-  container: {
-    paddingVertical: 10,
-    paddingHorizontal: 10,
-    width: '100%',
-    backgroundColor: 'white',
-  },
-  text: {
-    width: '100%',
-    textAlign: 'left',
-    fontWeight: 'bold',
-  },
+    container: {width:100, height:130,},
+    scroll: {width, height},
+    image: {width, height, resizeMode: 'cover', borderRadius:0},
+    pagination: {flexDirection:'row', position:'absolute', bottom:0, alignSelf:'center'},
+    pagingText: {color:'#888', margin: 3},
+    pagingActiveText: {color:'#fff', margin: 3}
 });

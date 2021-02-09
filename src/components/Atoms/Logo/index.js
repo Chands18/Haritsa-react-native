@@ -13,7 +13,7 @@ export default function Logo() {
 export const Photo = () => {
     return (
         <View style={{padding:20, alignItems:'center'}}>
-            <Image source={images.img_Logo} style={styles} />
+            <Image source={images.img_logo} style={styles} />
         </View>
     );
     }

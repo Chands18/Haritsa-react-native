@@ -7,84 +7,46 @@ import {
   Image,
   FlatList
 } from 'react-native';
+import { dummiesProduct, icons } from '../../../assets';
+import { FormatCurrency } from '../../../utils';
 import Gap from '../../Atoms/Gap';
 
-const data = [
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-];
+
 const renderItem=(item,index) => {
   console.log (item)
   return (
     <View>
-      <View
-        style={{
-          marginTop: 10,
-          borderColor:'black',
-          width:180,
-          paddingHorizontal:10,
-          paddingTop:10,
-          marginLeft:6
-          
-        }}>
-        <Image
-          source={require('../../../assets/images/produk-131.png')}
-          style={{width: '100%', height: 170, borderWidth:1, borderColor:'pink'}}
-        />
-        <View style={{padding:10, backgroundColor:'white'}}>
-          <Text>Nama Produk</Text>
-          <Text>Rp 1.000</Text>
-        </View>
-        <View style={{padding:10, backgroundColor:'deeppink', borderRadius:6, flexDirection:'row', justifyContent:'space-evenly'}}>
+        <View
+          style={{
+            marginTop: 10,
+            width:180,
+            paddingHorizontal:10,
+            paddingTop:10,
+            marginLeft:6,
+            borderWidth:1,
+            borderRadius:5,
+            borderColor:'lightgrey'
+          }}>
           <Image
-            source={require('../../../assets/Icon/hrtsicon.png')}
-            style={{
-              width: 20,
-              height: 25,
-            }}
+            source={item.item.image}
+            style={{width: '100%', height: 170,}}
           />
-            <Text style={{fontWeight:'bold', color:'white',}}>Add to Cart</Text>
+          <View style={{padding:10, backgroundColor:'white'}}>
+            <Text>{item.item.name}</Text>
+            <Text>{FormatCurrency({num:item.item.price})}</Text>
+          </View>
+          <View style={{padding:10,elevation:10,width:167,right:4, bottom:5, backgroundColor:'deeppink', borderRadius:6, flexDirection:'row', justifyContent:'space-evenly'}}>
+            <Image
+              source={icons.ic_logo}
+              style={{
+                width: 20,
+                height: 25,
+              }}
+            />
+              <Text style={{fontWeight:'bold', color:'white',}}>Add to Cart</Text>
+          </View>
         </View>
-      </View>
-      <Gap width={10} />
+        <Gap width={10} />
     </View>
   );
 }
@@ -93,14 +55,13 @@ const KatalogCards = () => {
     <View
       style={{
         backgroundColor: 'white',
-        marginTop: 20,
+        marginTop: 10,
         flexDirection: 'column',
         padding: 15,
         flexWrap: 'wrap',
-        marginRight: -10,
       }}>
       <Text style={{fontWeight:'bold'}}>Products</Text>
-      <FlatList numColumns={2} renderItem={renderItem} data={data} keyExtractor={(item,index)=>index.toString()} />
+      <FlatList numColumns={2} renderItem={renderItem} data={dummiesProduct} keyExtractor={(item,index)=>index.toString()} />
         
     </View>
   );

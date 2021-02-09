@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View, FlatList, Dimensions, Image } from 'react-native'
 import { DiscountCard } from '..'
-import { images } from '../../../assets';
+import { dummiesPromo, images } from '../../../assets';
 
 const dummiImage = [images.img_Logo,images.img_Logo]
 const {width,height}=Dimensions.get('window');
@@ -19,10 +19,11 @@ const dummies = [
 
 export default function Layout() {
     const renderItem=({item,index})=>{
+        console.log(item)
         return(
-            <View style={{width:106,marginRight:10,alignItems:'center',}}>
+            <View style={{width:106,marginRight:10,alignItems:'center',elevation:10,}}>
             <DiscountCard>
-                <Text>{item.text}</Text>
+                <Image resizeMode='cover' style={{flex:1, borderRadius:10}} source={item}/>
             </DiscountCard>
             </View>
         )
@@ -39,7 +40,7 @@ export default function Layout() {
         <View style={styles.container}>
             <Text style={styles.text}>Promo This Month</Text>
                 <View style={{marginTop:10, justifyContent:'center',alignItems:'center' ,width:'100%', elevation:10,}}>
-                    <FlatList scrollEnabled={false} data={dummies} numColumns={3} style={{height:120}} renderItem={renderItem} keyExtractor={(item,index)=>index.toString()} />
+                    <FlatList scrollEnabled={false} data={dummiesPromo} numColumns={3} style={{height:120}} renderItem={renderItem} keyExtractor={(item,index)=>index.toString()} />
                 </View>
                 <View >
                     <FlatList scrollEnabled={true} data={dummies} horizontal style={{height:129,width:'100%'}} renderItem={renderItem2} keyExtractor={(item,index)=>index.toString()} />
