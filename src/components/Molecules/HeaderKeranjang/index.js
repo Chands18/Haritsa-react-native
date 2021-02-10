@@ -1,19 +1,16 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image, Dimensions } from 'react-native'
+import { StyleSheet, Text, View, Image } from 'react-native'
+import { icons } from '../../../assets'
 
-const {width} = Dimensions.get('window');
 const HeaderKeranjang = () => {
     return (
-        <View style={styles.container}>
-            <Image style={{right:74}} source={require('../../../assets/Icon/BackIcon.png')}/>
-            <Text style={styles.text}>Keranjang Belanja</Text>
+        <View style={{backgroundColor:'deeppink',height:60, flexDirection:'row', justifyContent:'flex-start', alignItems:'center', width:'100%'}}> 
+            <Text style={{fontSize:18,fontWeight:'bold', textAlign:'center',left:20, color:'white' }}>Shopping cart</Text>
         </View>
     )
 }
 
 export default HeaderKeranjang
 
-const styles = StyleSheet.create({
-    container: {width,height:72,flexDirection:'row', backgroundColor:'darkseagreen', justifyContent:'center',alignItems:'center'},
-    text: {fontSize:25,}
-})
+const styles = StyleSheet.create({})
+
