@@ -80,3 +80,26 @@ export const dummiesDiscount =[
         stock:'Stock tersisa:10'
     },
 ]
+
+export const dummiesDescription =[
+    {
+        price:10,
+        name:'produk',
+        description:'menambahkan butter untuk makanan bayi pun piliihan yang baik. Butter sangat bergizi, memberikan lemak dan kolesterol yang diperlukan, juga vitamin A, Asam linoeat terkonjugasi dan asam lemak esensial. Namun ingat untuk selalu memilih mentega tawar, karena garam belebih tak baik untuk ginjal bayi. Mentega terbaik juga harus diproduksi secara organik untuk menghindari penambahan hormon atau obat yang diberikan kepada sapi penghasil susu yang digunakan sebagai bahan mentega.',
+        stock:'Stok:80',
+        sold:'terjual:20',
+    }
+]
+
+export const dummiesCart =[
+    {
+        image:images.img_produk,
+        price:3000,
+        name:'greentea',
+    },
+    {
+        image:images.img_produk,
+        price:5000,
+        name:'krekers',
+    },
+]

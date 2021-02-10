@@ -9,7 +9,6 @@ const KeranjangBelanja = () => {
         <View style={styles.container}>
             <HeaderKeranjang/>
             <DetailCart/>
-            <BottomCard/>
         </View>
         </ScrollView>
     )

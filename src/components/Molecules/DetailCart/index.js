@@ -7,84 +7,50 @@ import {
   Image,
   FlatList,
 } from 'react-native';
-import { TextInput } from 'react-native-gesture-handler';
+import {TouchableOpacity} from 'react-native-gesture-handler';
+import {dummiesCart, dummiesDiscount, icons} from '../../../assets';
+import {FormatCurrency} from '../../../utils';
 import Gap from '../../Atoms/Gap';
 
-const {width} = Dimensions.get('window');
-const data = [
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-  {
-    id: 1,
-    name: 'Nama Product',
-    price: 'Rp.1000',
-  },
-];
 const renderItem = (item, index) => {
   console.log(item);
   return (
-    <View>
+    <View style={{backgroundColor: 'lightgrey', width: 500}}>
       <View
         style={{
-          width,
-          paddingVertical: 5,
+          marginVertical: 4,
+          width: 180,
+          paddingHorizontal: 10,
+          marginHorizontal: 5,
           flexDirection: 'row',
-          backgroundColor:'honeydew',
-          borderRadius:10,
-          marginVertical: 6
+          backgroundColor: 'white',
+          borderRadius: 10,
         }}>
         <Image
-          source={{
-            uri:
-              'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png',
-          }}
-          style={{
-            width: 170,
-            height: 170,
-            backgroundColor: 'gold',
-            borderRadius: 10,
-            marginLeft:10
-          }}
+          source={item.item.image}
+          style={{width: '100%', height: '100%', borderRadius: 10}}
         />
-        <View>
-          <Text style={{fontSize: 17, width}}>Nama Produk</Text>
-          <Text style={{marginTop: 20, fontSize: 17}}>Rp 10.000</Text>
-          <Text style={{color: 'black', marginLeft: 170, bottom: 20}}>1</Text>
-          <Text style={{marginLeft:169, bottom:90, fontSize:20}}>-</Text>
-          <Text style={{marginLeft:167, fontSize: 20}}>+</Text>
+        <View
+          style={{
+            backgroundColor: 'white',
+            width: 220,
+            left: 10,
+            height: 200,
+            borderRadius: 10,
+          }}>
+          <View style={{marginLeft: 15, marginTop: 5, position: 'relative'}}>
+            <Text>{item.item.name}</Text>
+            <Text style={{textDecorationLine: 'line-through'}}>
+              {FormatCurrency({num: item.item.price})}
+            </Text>
+            <Text style={{color: 'red', left: 100, bottom: 22}}>
+              {FormatCurrency({num: item.item.price})}
+            </Text>
+            <Text>{item.item.stock}</Text>
+          </View>
+      <View style={{marginLeft:180}}>
+        <Text style={{borderWidth:2, backgroundColor:'red', borderRadius:10, width:25, textAlign:'center', fontWeight:'bold', color:'white'}}>X</Text>
+      </View>
         </View>
       </View>
       <Gap width={10} />
@@ -95,32 +61,15 @@ const DetailCart = () => {
   return (
     <View
       style={{
-        marginTop: 5,
         flexDirection: 'column',
-        paddingBottom:10,
         flexWrap: 'wrap',
-        marginRight: 10,
       }}>
       <FlatList
         numColumns={1}
         renderItem={renderItem}
-        data={data}
+        data={dummiesCart}
         keyExtractor={(item, index) => index.toString()}
-        />
-        <View style={{flexDirection:'row',justifyContent:'space-evenly',padding:10, }}>
-          <Text>Item : ###</Text>
-          <Text>Total : Rp.###</Text>
-        </View>
-        <View style={{backgroundColor:'white', height:200, borderRadius:10}}>
-          <Text style={{fontStyle:'italic', textAlign:'right', right:10}}>No.order</Text>
-          <TextInput placeholder="Nama Anda" style={{borderBottomColor:'black', borderBottomWidth:0.7, marginHorizontal:8, fontStyle:'italic'}}></TextInput>
-          <TextInput placeholder="No. HP WA Anda" style={{borderBottomColor:'black', borderBottomWidth:0.7, marginHorizontal:8, fontStyle:'italic'}}></TextInput>
-          <TextInput placeholder="No. Kartu Member" style={{borderBottomColor:'black', borderBottomWidth:0.7, marginHorizontal:8, fontStyle:'italic'}}></TextInput>
-        </View>
-        <View style={{margin:10, height:45, flexDirection:'row', borderWidth:1, borderRadius:20, backgroundColor:'cyan', justifyContent:'center', alignItems:'center',  }}>
-          <Image style={{height:28, width:28}} source={require('../../../assets/Icon/logowa.png')}/>
-          <Text style={{fontStyle:'italic', fontWeight:'bold'  }}>Kirim Ke WA</Text>
-        </View>
+      />
     </View>
   );
 };
