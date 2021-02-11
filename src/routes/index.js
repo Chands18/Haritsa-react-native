@@ -3,7 +3,7 @@ import {Image} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {
-  Home, Katalog, Promo, DetailProduk, KeranjangBelanja, Brosur, Berkah, Testnavigation, TestDetailNavigation
+  Home, Katalog, Promo, DetailProduk, KeranjangBelanja, Brosur, Berkah,News, Testnavigation, TestDetailNavigation
 } from '../pages';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 // import {icons} from '../assets';
@@ -97,14 +97,19 @@ export const Routes = () => {
           component={Promo}
           options={{headerShown: false}}
         />
-        <Tab.Screen
+        <Stack.Screen
         name="Detail"
         component={DetailProduk}
         options={{headerShown: false}}
         />
-        <Tab.Screen
+        <Stack.Screen
         name="Keranjang"
         component={KeranjangBelanja}
+        options={{headerShown: false}}
+        />
+        <Stack.Screen
+        name="news"
+        component={News}
         options={{headerShown: false}}
         />
        
