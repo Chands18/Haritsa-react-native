@@ -57,11 +57,6 @@ const BottomTabNavigator = () => {
         options={{title: 'Katalog'}}
       />
       <Tab.Screen
-        name="Keranjang"
-        component={KeranjangBelanja}
-        options={{title: 'Keranjang'}}
-      />
-      <Tab.Screen
         name="Brosur"
         component={Brosur}
         options={{title: 'Brosur'}}
@@ -105,6 +100,11 @@ export const Routes = () => {
         <Tab.Screen
         name="Detail"
         component={DetailProduk}
+        options={{headerShown: false}}
+        />
+        <Tab.Screen
+        name="Keranjang"
+        component={KeranjangBelanja}
         options={{headerShown: false}}
         />
        
