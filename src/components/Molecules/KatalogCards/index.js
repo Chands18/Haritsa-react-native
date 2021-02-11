@@ -19,7 +19,7 @@ const renderItem=(item,index) => {
     <View>
         <View
           style={{
-            marginTop: 10,
+            marginVertical:5,
             width:180,
             paddingHorizontal:10,
             paddingTop:10,
@@ -64,6 +64,7 @@ const KatalogCards = () => {
         flexDirection: 'column',
         padding: 15,
         flexWrap: 'wrap',
+
       }}>
       <Text style={{fontWeight:'bold'}}>Products</Text>
       <FlatList numColumns={2} renderItem={renderItem} data={dummiesProduct} keyExtractor={(item,index)=>index.toString()} />
