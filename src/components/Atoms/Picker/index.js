@@ -9,7 +9,7 @@ const items =[
     {label: 'Pematang Siantar', value: 'PMS'},
     {label: 'France', value: 'france'},
 ]
-export const Pickers = () => {
+export const Pickers = ({navigation}) => {
     const [selectedValue, setSelectedValue] = useState("java");
   return (
     <View style={styles.container}>
@@ -25,6 +25,7 @@ export const Pickers = () => {
             onChangeItem={item => setSelectedValue(item.value)}/>
 
         <TouchableOpacity
+        onPress={()=>navigation.navigate('bottomnavigator')}
             style={{height:'100%',width:'15%',backgroundColor:'white', borderRadius:5}}>
                 <Text style={{textAlign:'center',textAlignVertical:'center' ,height:'100%', color:'grey', fontWeight:'bold',fontSize:20}}>Go</Text>
         </TouchableOpacity>    

@@ -3,7 +3,7 @@ import {Image} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {
-  Home, Katalog, Promo, DetailProduk, KeranjangBelanja, Brosur, Berkah
+  Home, Katalog, Promo, DetailProduk, KeranjangBelanja, Brosur, Berkah, Testnavigation, TestDetailNavigation
 } from '../pages';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 // import {icons} from '../assets';
@@ -52,19 +52,9 @@ const BottomTabNavigator = () => {
       >
 
       <Tab.Screen
-        name="home"
-        component={Home}
-        options={{title: 'Home'}}
-      />
-      <Tab.Screen
         name="katalog"
         component={Katalog}
         options={{title: 'Katalog'}}
-      />
-      <Tab.Screen
-        name="promo"
-        component={Promo}
-        options={{title: 'Promo'}}
       />
       <Tab.Screen
         name="Detail"
@@ -82,8 +72,8 @@ const BottomTabNavigator = () => {
         options={{title: 'Brosur'}}
       />
       <Tab.Screen
-        name="Berkah"
-        component={Berkah}
+        name="testnavigasi"
+        component={TestDetailNavigation}
         options={{title: 'Berkah'}}
       />
 
@@ -95,11 +85,26 @@ const Stack = createStackNavigator();
 export const Routes = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="bottomnavigator">
+      <Stack.Navigator initialRouteName="home">
         
         <Stack.Screen
           name="bottomnavigator"
           component={BottomTabNavigator}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="detailnavigasi"
+          component={Testnavigation}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+        name="home"
+        component={Home}
+        options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="promo"
+          component={Promo}
           options={{headerShown: false}}
         />
        

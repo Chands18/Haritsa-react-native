@@ -8,6 +8,8 @@ import {
   Dimensions,
 } from 'react-native';
 import { useState } from 'react';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
 const {width} = Dimensions.get('window');
 const height = width * 0.6;
@@ -20,6 +22,7 @@ const images = [
 ];
 
 const PromoKatalog = () => {
+const navigation = useNavigation();
 const [active,setActive] = useState(0)
 
 const change = ({nativeEvent}) => {
@@ -33,13 +36,16 @@ const change = ({nativeEvent}) => {
       <View style={styles.container}>
         <ScrollView pagingEnabled horizontal onScroll={change} showsHorizontalScrollIndicator={false} style={styles.scroll}>
           {images.map((image, index) => (
+            <TouchableOpacity onPress={()=>navigation.navigate('promo')}>
             <Image
               key={index}
               source={{
                 uri: image,
               }}
+              
               style={styles.image}
             />
+            </TouchableOpacity>
           ))}
         </ScrollView>
         <View style={styles.pagination}>

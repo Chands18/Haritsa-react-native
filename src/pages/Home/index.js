@@ -9,7 +9,7 @@ export default function Home({navigation}) {
         <ScrollView style={{width:'100%', height:'100%'}}>
             <View style={styles.container}>
                 <Photo/>
-                <Pickers/>
+                <Pickers navigation={navigation}/>
                 <Layout/>
                 <Footer/>
             </View>
