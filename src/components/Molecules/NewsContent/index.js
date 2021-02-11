@@ -3,15 +3,17 @@ import { StyleSheet, Text, View, Image} from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 import { dummiesDescription, icons, images } from '../../../assets'
 import { useState } from 'react'
+import { useNavigation } from '@react-navigation/native'
 
 const NewsContent = () => {
+    const navigation = useNavigation();
     const [data,setData] = useState(dummiesDescription)
     return (
         <View style={{marginHorizontal:7,}}>
             <View style={{backgroundColor:'white',flexDirection:'row',alignItems:'center', borderRadius:5,elevation:20,width:400,height:120, marginVertical:5}}>
                 <Image style={{borderRadius:8, marginLeft:5,}} source={images.img_produk4}/>
                 <Text style={{width:150,height:'90%'}}>{data.description}</Text>
-                <TouchableOpacity onPress={()=>navigation.navigate('')}>
+                <TouchableOpacity onPress={()=>navigation.navigate('detailnews')}>
               <View
                 style={{
                   height:35,
@@ -32,7 +34,7 @@ const NewsContent = () => {
             <View style={{backgroundColor:'white',flexDirection:'row',alignItems:'center', borderRadius:5,elevation:20,width:400,height:120, marginVertical:5}}>
                 <Image style={{borderRadius:8, marginLeft:5,}} source={images.img_produk4}/>
                 <Text style={{width:150,height:'90%'}}>{data.description}</Text>
-                <TouchableOpacity onPress={()=>navigation.navigate('')}>
+                <TouchableOpacity onPress={()=>navigation.navigate('detailnews')}>
               <View
                 style={{
                   height:35,
@@ -53,7 +55,7 @@ const NewsContent = () => {
             <View style={{backgroundColor:'white',flexDirection:'row',alignItems:'center', borderRadius:5,elevation:20,width:400,height:120, marginVertical:5}}>
                 <Image style={{borderRadius:8, marginLeft:5,}} source={images.img_produk4}/>
                 <Text style={{width:150,height:'90%'}}>{data.description}</Text>
-                <TouchableOpacity onPress={()=>navigation.navigate('')}>
+                <TouchableOpacity onPress={()=>navigation.navigate('detailnews')}>
               <View
                 style={{
                   height:35,
