@@ -6,10 +6,10 @@ import { BottomCard, DetailCart, HeaderKeranjang } from '../../components/Molecu
 const KeranjangBelanja = () => {
     return (
         <ScrollView>
-        <View style={styles.container}>
-            <HeaderKeranjang/>
-            <DetailCart/>
-        </View>
+            <View style={styles.container}>
+                <HeaderKeranjang/>
+                <DetailCart/>
+            </View>
         </ScrollView>
     )
 }
@@ -18,8 +18,7 @@ export default KeranjangBelanja
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        backgroundColor: 'white',
-        justifyContent:'flex-start'
+        backgroundColor: 'lightgrey',
+        justifyContent:'flex-start',
     }
 })
