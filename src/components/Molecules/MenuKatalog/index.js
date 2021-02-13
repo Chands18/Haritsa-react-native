@@ -15,7 +15,7 @@ export default function MenuKatalog() {
                 <View style={{width:35,alignItems:'center',justifyContent:'center',bottom:0}}>
                 </View>
             </View>
-            <View style={{flexDirection:'row', flexWrap:'wrap',marginHorizontal:16, marginTop:25}}>
+            <View style={{flexDirection:'row', flexWrap:'wrap',marginHorizontal:16,marginTop:20}}>
                 <View style={{justifyContent:'space-between', flexDirection:'row', width:'100%', marginBottom:18,}}>
                     <View>
                     <View style={{width:58, height:58, elevation:10 }}>
