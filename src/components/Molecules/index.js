@@ -23,6 +23,8 @@ import HeaderNews from './HeaderNews';
 import NewsContent from './NewsContent';
 import HeaderDetailNews from './HeaderDetailNews';
 import DetailNewsContent from './DetailNewsContent'
+import TransactionContent from './TransactionContent'
+import HeaderTransaction from './HeaderTransaction'
 
 export {
   Layout,
@@ -49,5 +51,7 @@ export {
   HeaderNews,
   NewsContent,
   HeaderDetailNews,
-  DetailNewsContent
+  DetailNewsContent,
+  TransactionContent,
+  HeaderTransaction
 };
