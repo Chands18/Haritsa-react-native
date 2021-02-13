@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React, {useState, useEffect} from 'react';
 import {
   Dimensions,
@@ -14,6 +15,7 @@ import Gap from '../../Atoms/Gap';
 
 
 const DetailCart = () => {
+  const navigation = useNavigation();
   const [items,setitems]=useState([]);
     useEffect(()=>{
         let initialdata =[];
@@ -88,6 +90,7 @@ const DetailCart = () => {
         flexDirection: 'column',
         flexWrap: 'wrap',
         backgroundColor:'lightgrey',
+        marginBottom:80
       }}>
       <FlatList
         numColumns={1}
@@ -105,7 +108,7 @@ const DetailCart = () => {
       <Text style={{backgroundColor:'white', width:400, height:120, borderRadius:5,elevation:20,marginHorizontal:5, marginVertical:5}}></Text>
     </View>
     <View style={{marginLeft:160}}>
-            <TouchableOpacity onPress={()=>navigation.navigate('Transaction')}>
+            <TouchableOpacity onPress={()=>navigation.navigate('transaction')}>
               <View
                 style={{
                   padding: 10,

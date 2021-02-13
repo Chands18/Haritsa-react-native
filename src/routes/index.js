@@ -121,6 +121,11 @@ export const Routes = () => {
         component={DetailNews}
         options={{headerShown: false}}
         />
+        <Stack.Screen
+        name="transaction"
+        component={Transaction}
+        options={{headerShown: false}}
+        />
        
       </Stack.Navigator>
     </NavigationContainer>
