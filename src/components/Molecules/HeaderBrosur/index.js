@@ -3,10 +3,8 @@ import { StyleSheet, Text, View, Image } from 'react-native'
 
 const HeaderBrosur = () => {
     return (
-        <View style={{backgroundColor:'lightpink', height:72 ,flexDirection:'row', justifyContent:'space-between', alignItems:'center'}}>
-            <Image style={{}} source={require('../../../assets/Icon/BackIcon.png')}/>
-            <Text style={{fontSize:20, color:'black'}}>Brosur</Text>
-            <Image source={require('../../../assets/Icon/download.png')}/>
+        <View style={{backgroundColor:'deeppink',height:60, flexDirection:'row', justifyContent:'flex-start', alignItems:'center', width:'100%'}}> 
+            <Text style={{fontSize:18,fontWeight:'bold', textAlign:'center',left:20, color:'white' }}>Brochure</Text>
         </View>
     )
 }

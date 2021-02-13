@@ -8,56 +8,77 @@ import {
   Dimensions,
 } from 'react-native';
 import { useState } from 'react';
+import { dummiesDescription, icons, images } from '../../../assets';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const {width, height} = Dimensions.get('window');
-const images = [
-  'https://images.pexels.com/photos/4947277/pexels-photo-4947277.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-  'https://images.pexels.com/photos/6404055/pexels-photo-6404055.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-  'https://images.pexels.com/photos/6331121/pexels-photo-6331121.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-  'https://images.pexels.com/photos/5859749/pexels-photo-5859749.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-  'https://images.pexels.com/photos/5947042/pexels-photo-5947042.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260',
-];
 
 const BrosurContent = () => {
-const [active,setActive] = useState(0)
-
-const change = ({nativeEvent}) => {
-    const slide = Math.ceil(nativeEvent.contentOffset.x / nativeEvent.layoutMeasurement.width);
-    if(slide !== active){
-        setActive(slide);
-    }
-}
+  const [data,setData] = useState(dummiesDescription)
   return (
-    <View style={styles.container}>
-      <ScrollView pagingEnabled horizontal onScroll={change} showsHorizontalScrollIndicator={false} style={styles.scroll}>
-        {images.map((image, index) => (
-          <Image
-            key={index}
-            source={{
-              uri: image,
-            }}
-            style={styles.image}
-          />
-        ))}
-      </ScrollView>
-      <View style={styles.pagination}>
-          {
-              images.map((i,k) => (
-                  <Text key={k} style={k==active ? styles.pagingActiveText : styles.pagingText}>⬤</Text>
-              ))
-          }
-      </View>
-    </View>
+    <View style={{marginHorizontal:7,}}>
+            <View style={{backgroundColor:'white',flexDirection:'row',alignItems:'center', borderRadius:5,elevation:20,width:400,height:120, marginVertical:5}}>
+                <Image style={{borderRadius:8, marginLeft:5,}} source={images.img_produk4}/>
+                <Text style={{width:150,height:'90%'}}>{data.description}</Text>
+                <TouchableOpacity onPress={()=>navigation.navigate('detailnews')}>
+              <View
+                style={{
+                  height:35,
+                  width: 30,
+                  marginTop:65,
+                  marginLeft:80,
+                  alignItems:'center',
+                  backgroundColor: 'deeppink',
+                  borderRadius: 8,
+                  flexDirection: 'row',
+                }}>
+                <Image style={{height:30,width:30,backgroundColor:'transparent'}} source={icons.ic_download}/>
+              </View>
+            </TouchableOpacity>
+            </View>
+            <View style={{backgroundColor:'white',flexDirection:'row',alignItems:'center', borderRadius:5,elevation:20,width:400,height:120, marginVertical:5}}>
+                <Image style={{borderRadius:8, marginLeft:5,}} source={images.img_produk4}/>
+                <Text style={{width:150,height:'90%'}}>{data.description}</Text>
+                <TouchableOpacity onPress={()=>navigation.navigate('detailnews')}>
+              <View
+                style={{
+                  height:35,
+                  width: 30,
+                  marginTop:65,
+                  marginLeft:80,
+                  alignItems:'center',
+                  backgroundColor:'deeppink',
+                  borderRadius: 5,
+                  flexDirection: 'row',
+                }}>
+                <Image style={{height:30,width:30,backgroundColor:'transparent'}} source={icons.ic_download}/>
+              </View>
+            </TouchableOpacity>
+            </View>
+            <View style={{backgroundColor:'white',flexDirection:'row',alignItems:'center', borderRadius:5,elevation:20,width:400,height:120, marginVertical:5}}>
+                <Image style={{borderRadius:8, marginLeft:5,}} source={images.img_produk4}/>
+                <Text style={{width:150,height:'90%'}}>{data.description}</Text>
+                <TouchableOpacity onPress={()=>navigation.navigate('')}>
+              <View
+                style={{
+                  height:35,
+                  width: 30,
+                  marginTop:65,
+                  marginLeft:80,
+                  alignItems:'center',
+                  backgroundColor: 'deeppink',
+                  borderRadius: 5,
+                  flexDirection: 'row',
+                }}>
+                <Image style={{height:30,width:30,backgroundColor:'transparent'}} source={icons.ic_download}/>
+              </View>
+            </TouchableOpacity>
+            </View>
+        </View>
   );
 };
 
 export default BrosurContent;
 
 const styles = StyleSheet.create({
-    container: {width, height},
-    scroll: {width, height},
-    image: {width, height, resizeMode:'cover'},
-    pagination: {flexDirection:'row', position:'absolute', bottom:0, alignSelf:'center'},
-    pagingText: {color:'#888', margin: 3},
-    pagingActiveText: {color:'#fff', margin: 3}
 });
