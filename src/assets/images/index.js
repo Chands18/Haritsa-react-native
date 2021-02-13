@@ -13,4 +13,5 @@ export const images={
     img_bayi2:require('./perlengkapan-tidur.png'),
     img_bayi3:require('./mainan-bayi.png'),
     img_bayi4:require('./diapers-susu.png'),
+    img_news:require('./slider-31.png'),
 }
