@@ -6,7 +6,7 @@ import { images } from '../../../assets'
 
 export default function MenuKatalog() {
     return (
-        <View style={{backgroundColor:'white', marginTop:10}}>
+        <View style={{backgroundColor:'white', marginTop:10, borderRadius:10,elevation:10}}>
             <View style={{flexDirection:'row', paddingTop:15, marginHorizontal:20,width:'100%'}}>
                 <View style={{position:'relative', flex:1}}>
                 <TextInput placeholder="Search Data" style={{elevation:15 ,borderRadius:10,height:40,fontSize:13,backgroundColor:'white', textAlign:'center'}}/>
