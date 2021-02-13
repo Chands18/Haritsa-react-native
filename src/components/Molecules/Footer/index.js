@@ -1,5 +1,7 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react'
 import { StyleSheet, Text, View, FlatList, Image} from 'react-native'
+import { TouchableOpacity } from 'react-native-gesture-handler';
 import { NewsCard } from '..' ;
 import { dummiesBerkah, dummiesProduk } from '../../../assets';
 
@@ -19,16 +21,18 @@ const dummies = [
 ]
 
 export default function Footer() {
+    const navigation = useNavigation();
         const renderItem=({item,index})=>{
             return(
                 <View style={{width:108, marginRight:10,alignItems:'center'}}>
                 <NewsCard>
-                <Image resizeMode='cover' style={{flex:1, borderRadius:10}} source={item}/>
+                    <TouchableOpacity onPress={()=>navigation.navigate('news')}> 
+                        <Image resizeMode='cover' style={{flex:1, borderRadius:10}} source={item}/>
+                    </TouchableOpacity>
                 </NewsCard>
                 </View>
             )
         }
-        
             return (
                 <View style={styles.container}> 
                     <Text style={styles.text}>Berkah</Text>
