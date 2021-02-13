@@ -60,10 +60,12 @@ const KatalogCards = () => {
     <View
       style={{
         backgroundColor: 'white',
-        marginTop: 10,
+        marginVertical: 10,
         flexDirection: 'column',
         padding: 15,
         flexWrap: 'wrap',
+        borderRadius:10,
+        elevation:10
 
       }}>
       <Text style={{fontWeight:'bold'}}>Products</Text>
