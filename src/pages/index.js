@@ -8,5 +8,6 @@ import Berkah from './Berkah'
 import TestDetailNavigation from './TestDetailNavigation'
 import Testnavigation from './Testnavigation'
 import News from './News'
+import DetailNews from './DetailNews'
 
-export {Home, Katalog, Promo, DetailProduk, KeranjangBelanja, Brosur, Berkah,Testnavigation,TestDetailNavigation, News};
+export {Home, Katalog, Promo, DetailProduk, KeranjangBelanja, Brosur, Berkah,Testnavigation,TestDetailNavigation, News, DetailNews};
