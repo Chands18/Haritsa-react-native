@@ -1,11 +1,12 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import { HeaderDetailNews } from '../../components'
+import { DetailNewsContent, HeaderDetailNews } from '../../components'
 
 const DetailNews = () => {
     return (
         <View>
             <HeaderDetailNews/>
+            <DetailNewsContent/>
         </View>
     )
 }

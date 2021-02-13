@@ -10,7 +10,7 @@ export default function Katalog({navigation}) {
         <ScrollView style={{width:'100%', height:'100%'}}>
             <View style={styles.container}>
                 <HeaderKatalog/>
-                <PromoKatalog/>
+                <PromoKatalog />
                 <MenuKatalog/>
                 <KatalogCards/>
             </View>

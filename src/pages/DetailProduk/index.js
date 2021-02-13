@@ -11,7 +11,6 @@ const DetailProduk = () => {
             <DetailSlider/>
             <Deskripsiproduk/>
             <DetailCards/>
-            <Button/>
         </View>
         </ScrollView>
     )
