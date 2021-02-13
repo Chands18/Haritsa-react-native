@@ -51,6 +51,8 @@ const styles = StyleSheet.create({
         height: 200,
         margin: 15,
         backgroundColor: 'white',
+        borderRadius:10,
+        elevation:10
     },
     text: {
         width: '100%',

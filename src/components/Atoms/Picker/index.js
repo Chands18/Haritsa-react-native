@@ -17,7 +17,7 @@ export const Pickers = ({navigation}) => {
             items={items}
             defaultValue={items[0].value}
             containerStyle={{flex:1,height:'100%',}}
-            style={{backgroundColor: '#fafafa'}}
+            style={{backgroundColor: 'lightgrey',elevation:5}}
             itemStyle={{
                 justifyContent: 'flex-start'
             }}
@@ -26,8 +26,8 @@ export const Pickers = ({navigation}) => {
 
         <TouchableOpacity
         onPress={()=>navigation.navigate('bottomnavigator')}
-            style={{height:'100%',width:'15%',backgroundColor:'white', borderRadius:5}}>
-                <Text style={{textAlign:'center',textAlignVertical:'center' ,height:'100%', color:'grey', fontWeight:'bold',fontSize:20}}>Go</Text>
+            style={{height:'100%',width:'15%',backgroundColor:'lightgrey',elevation:5, borderRadius:5}}>
+                <Text style={{textAlign:'center',textAlignVertical:'center' ,height:'100%', color:'dimgrey', fontWeight:'bold',fontSize:20}}>Go</Text>
         </TouchableOpacity>    
     </View>
   );

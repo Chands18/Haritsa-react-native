@@ -21,9 +21,9 @@ export default function Layout() {
     const renderItem=({item,index})=>{
         console.log(item)
         return(
-            <View style={{width:106,marginRight:10,alignItems:'center',elevation:10,}}>
+            <View style={{width:106,marginRight:10,alignItems:'center',}}>
             <DiscountCard>
-                <Image resizeMode='cover' style={{flex:1, borderRadius:10}} source={item}/>
+                <Image resizeMode='cover' style={{flex:1, borderRadius:10,}} source={item}/>
             </DiscountCard>
             </View>
         )
@@ -39,7 +39,7 @@ export default function Layout() {
     return (   
         <View style={styles.container}>
             <Text style={styles.text}>Promo This Month</Text>
-                <View style={{marginTop:10, justifyContent:'center',alignItems:'center' ,width:'100%', elevation:10,}}>
+                <View style={{marginTop:10, justifyContent:'center',alignItems:'center' ,width:'100%',}}>
                     <FlatList scrollEnabled={false} data={dummiesProduk} numColumns={3} style={{height:120}} renderItem={renderItem} keyExtractor={(item,index)=>index.toString()} />
                 </View>
                 <View >
@@ -55,7 +55,10 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         paddingHorizontal:10,
         width: '100%',
-        backgroundColor: 'white',
+        marginHorizontal:5,
+        elevation:10,
+        borderRadius:10,
+        backgroundColor:'white'
     },
     text: {
         width: '100%',
