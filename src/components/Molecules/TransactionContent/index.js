@@ -1,8 +1,11 @@
+import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { StyleSheet, Text, View, TextInput, Image} from 'react-native'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 import { icons } from '../../../assets'
 
 const TransactionContent = () => {
+    const navigation = useNavigation();
     return (
         <View>
             <View style={{flexDirection:'row', paddingTop:10,marginBottom:10, marginHorizontal:20,width:'100%'}}>
@@ -17,29 +20,29 @@ const TransactionContent = () => {
                 <View style={{backgroundColor:'white', width:390, height:150, borderRadius:5,elevation:20,marginHorizontal:10,marginBottom:10}}>
                     <Text>INV-210130-0001</Text>
                     <Text style={{left:270,bottom:22}}>30 January 2021</Text>
-                    <View style={{alignItems:'center',}}>
-                    <Image style={{width:350,marginBottom:10,bottom:15}} source={icons.ic_line}/>
+                    <Image style={{width:350,marginBottom:10,bottom:15, alignSelf:'center'}} source={icons.ic_line}/>
                     <Text style={{bottom:10}}>Transaksi di Toko Serba Ada dengan total pembelian sebesar Rp 10.000.000,00</Text>
-                    <Text style={{backgroundColor:'deeppink',color:'white' ,borderRadius:10,width:100,textAlign:'center',top:30,left:130}}>Details...</Text>
-                    </View>
+                    <TouchableOpacity style={{height:'100%'}} onPress={()=>navigation.navigate('detailtransaction')}>
+                    <Text style={{backgroundColor:'deeppink',color:'white' ,borderRadius:8,width:100,height:30,textAlign:'center',alignSelf:'flex-end',top:20}}>Details...</Text>
+                    </TouchableOpacity>
                 </View>
                 <View style={{backgroundColor:'white', width:390, height:150, borderRadius:5,elevation:20,marginHorizontal:10,marginBottom:10}}>
                     <Text>INV-210130-0001</Text>
                     <Text style={{left:270,bottom:22}}>30 January 2021</Text>
-                    <View style={{alignItems:'center',}}>
-                    <Image style={{width:350,marginBottom:10,bottom:15}} source={icons.ic_line}/>
+                    <Image style={{width:350,marginBottom:10,bottom:15, alignSelf:'center'}} source={icons.ic_line}/>
                     <Text style={{bottom:10}}>Transaksi di Toko Serba Ada dengan total pembelian sebesar Rp 10.000.000,00</Text>
-                    <Text style={{backgroundColor:'deeppink',color:'white' ,borderRadius:10,width:100,textAlign:'center',top:30,left:130}}>Details...</Text>
-                    </View>
+                    <TouchableOpacity style={{height:'100%'}} onPress={()=>navigation.navigate('detailtransaction')}>
+                    <Text style={{backgroundColor:'deeppink',color:'white' ,borderRadius:8,width:100,height:30,textAlign:'center',alignSelf:'flex-end',top:20}}>Details...</Text>
+                    </TouchableOpacity>
                 </View>
                 <View style={{backgroundColor:'white', width:390, height:150, borderRadius:5,elevation:20,marginHorizontal:10,marginBottom:10}}>
                     <Text>INV-210130-0001</Text>
                     <Text style={{left:270,bottom:22}}>30 January 2021</Text>
-                    <View style={{alignItems:'center',}}>
-                    <Image style={{width:350,marginBottom:10,bottom:15}} source={icons.ic_line}/>
+                    <Image style={{width:350,marginBottom:10,bottom:15, alignSelf:'center'}} source={icons.ic_line}/>
                     <Text style={{bottom:10}}>Transaksi di Toko Serba Ada dengan total pembelian sebesar Rp 10.000.000,00</Text>
-                    <Text style={{backgroundColor:'deeppink',color:'white' ,borderRadius:10,width:100,textAlign:'center',top:30,left:130}}>Details...</Text>
-                    </View>
+                    <TouchableOpacity style={{height:'100%'}} onPress={()=>navigation.navigate('detailtransaction')}>
+                    <Text style={{backgroundColor:'deeppink',color:'white' ,borderRadius:8,width:100,height:30 ,textAlign:'center',alignSelf:'flex-end',top:20}}>Details...</Text>
+                    </TouchableOpacity>
                 </View>
             </View>
         </View>
