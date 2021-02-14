@@ -55,8 +55,7 @@ const styles = StyleSheet.create({
         paddingVertical: 10,
         paddingHorizontal:10,
         width: '100%',
-        marginHorizontal:5,
-        elevation:10,
+        elevation:2,
         borderRadius:10,
         backgroundColor:'white'
     },

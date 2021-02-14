@@ -7,7 +7,7 @@ state = {
   };
 const items =[
     {label: 'Pematang Siantar', value: 'PMS'},
-    {label: 'France', value: 'france'},
+    {label: 'Palembang', value: 'PAL'},
 ]
 export const Pickers = ({navigation}) => {
     const [selectedValue, setSelectedValue] = useState("java");
@@ -17,16 +17,16 @@ export const Pickers = ({navigation}) => {
             items={items}
             defaultValue={items[0].value}
             containerStyle={{flex:1,height:'100%',}}
-            style={{backgroundColor: 'lightgrey',elevation:5}}
+            style={{backgroundColor: 'white',elevation:2}}
             itemStyle={{
                 justifyContent: 'flex-start'
             }}
-            dropDownStyle={{backgroundColor: '#fafafa'}}
+            dropDownStyle={{backgroundColor: 'white'}}
             onChangeItem={item => setSelectedValue(item.value)}/>
 
         <TouchableOpacity
         onPress={()=>navigation.navigate('bottomnavigator')}
-            style={{height:'100%',width:'15%',backgroundColor:'lightgrey',elevation:5, borderRadius:5}}>
+            style={{height:'100%',width:'15%',backgroundColor:'lightgrey',elevation:2, borderRadius:5}}>
                 <Text style={{textAlign:'center',textAlignVertical:'center' ,height:'100%', color:'dimgrey', fontWeight:'bold',fontSize:20}}>Go</Text>
         </TouchableOpacity>    
     </View>
