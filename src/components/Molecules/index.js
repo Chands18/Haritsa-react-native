@@ -24,7 +24,11 @@ import NewsContent from './NewsContent';
 import HeaderDetailNews from './HeaderDetailNews';
 import DetailNewsContent from './DetailNewsContent'
 import TransactionContent from './TransactionContent'
-import HeaderTransaction from './HeaderTransaction'
+import HeaderTransaction from './HeaderTransaction';
+import DetailTransaction from './DetailTransaction';
+import HeaderDetTransaction from './HeaderDetTransaction';
+import HeaderAccount from './HeaderAccount';
+import AkunContent from './AkunContent'
 
 export {
   Layout,
@@ -53,5 +57,9 @@ export {
   HeaderDetailNews,
   DetailNewsContent,
   TransactionContent,
-  HeaderTransaction
+  HeaderTransaction,
+  DetailTransaction,
+  HeaderDetTransaction,
+  HeaderAccount,
+  AkunContent
 };

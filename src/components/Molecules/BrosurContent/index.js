@@ -29,10 +29,10 @@ const BrosurContent = () => {
                   marginLeft:80,
                   alignItems:'center',
                   backgroundColor: 'deeppink',
-                  borderRadius: 8,
+                  borderRadius: 3,
                   flexDirection: 'row',
                 }}>
-                <Image style={{height:30,width:30,backgroundColor:'transparent'}} source={icons.ic_download}/>
+                <Image style={{height:30,width:30,tintColor:'white'}} source={icons.ic_download}/>
               </View>
             </TouchableOpacity>
             </View>
@@ -48,10 +48,10 @@ const BrosurContent = () => {
                   marginLeft:80,
                   alignItems:'center',
                   backgroundColor:'deeppink',
-                  borderRadius: 5,
+                  borderRadius: 3,
                   flexDirection: 'row',
                 }}>
-                <Image style={{height:30,width:30,backgroundColor:'transparent'}} source={icons.ic_download}/>
+                <Image style={{height:30,width:30,tintColor:'white'}} source={icons.ic_download}/>
               </View>
             </TouchableOpacity>
             </View>
@@ -67,10 +67,10 @@ const BrosurContent = () => {
                   marginLeft:80,
                   alignItems:'center',
                   backgroundColor: 'deeppink',
-                  borderRadius: 5,
+                  borderRadius: 3,
                   flexDirection: 'row',
                 }}>
-                <Image style={{height:30,width:30,backgroundColor:'transparent'}} source={icons.ic_download}/>
+                <Image style={{height:30,width:30,tintColor:'white'}} source={icons.ic_download}/>
               </View>
             </TouchableOpacity>
             </View>

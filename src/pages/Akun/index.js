@@ -1,15 +1,21 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import { HeaderAccount } from '../../components'
+import { AkunContent, HeaderAccount } from '../../components'
 
 const Akun = () => {
     return (
-        <View>
+        <View style={styles.container}>
             <HeaderAccount/>
+            <AkunContent/>
         </View>
     )
 }
 
 export default Akun
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container:{
+        backgroundColor:'white',
+         height:'100%'
+    }     
+})
