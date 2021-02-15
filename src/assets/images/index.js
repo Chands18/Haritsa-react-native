@@ -1,5 +1,5 @@
 export const images={
-    img_logo:require('./Haritsa-Logo.png'),
+    img_logo:require('./logo4.png'),
     img_produk:require('./produk-131.png'),
     img_produk2:require('./promo-31.png'),
     img_produk3:require('./promo-11.png'),
@@ -14,5 +14,6 @@ export const images={
     img_bayi3:require('./mainan-bayi.png'),
     img_bayi4:require('./diapers-susu.png'),
     img_news:require('./slider-31.png'),
-    img_regis:require('./haritsa-register.png'),
+    img_regis:require('./haritsa-register1.png'),
+    img_login:require('./haritsa-login1.png')
 }
