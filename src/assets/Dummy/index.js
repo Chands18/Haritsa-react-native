@@ -110,3 +110,17 @@ export const dummiesdescnews =
 
 }
 
+export const dummiesTransaction =[
+    {
+        image:images.img_produk,
+        price:3000,
+        name:'greentea',
+        amount: 'Qty:'
+    },
+    {
+        image:images.img_produk,
+        price:5000,
+        name:'krekers',
+        amount: 'Qty:'
+    },
+]
