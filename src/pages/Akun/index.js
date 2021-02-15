@@ -1,10 +1,11 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import { HeaderAccount } from '../../components'
 
 const Akun = () => {
     return (
         <View>
-            <Text></Text>
+            <HeaderAccount/>
         </View>
     )
 }
