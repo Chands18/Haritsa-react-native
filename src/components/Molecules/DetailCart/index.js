@@ -1,5 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React, {useState, useEffect} from 'react';
+import { TextInput } from 'react-native';
 import {
   Dimensions,
   StyleSheet,
@@ -33,7 +34,7 @@ const DetailCart = () => {
   const renderItem = (item, index) => {
     console.log(item);
     return (
-      <View style={{backgroundColor: 'lightgrey', width: 500}}>
+      <View style={{width: 500}}>
         <View
           style={{
             marginVertical: 4,
@@ -99,13 +100,13 @@ const DetailCart = () => {
         initialdata={items.pcs}
         keyExtractor={(item, index) => index.toString()}
       />
-      <View style={{marginVertical:5,marginHorizontal:5,backgroundColor:'white',alignItems:'center' ,borderRadius:5, width:400, elevation:20, height:50, flexDirection:'row', justifyContent:'space-between'}}>
+      <View style={{marginVertical:5,marginHorizontal:5,backgroundColor:'white',alignItems:'center' ,borderRadius:5, width:400, elevation:10, height:50, flexDirection:'row', justifyContent:'space-between'}}>
           <Text style={{marginLeft:5}}>Items:</Text>
           <Text style={{right:140}}>Total:</Text>
     </View>
     <View>
       <Text style={{marginHorizontal:5}}>Delivery Address</Text>
-      <Text style={{backgroundColor:'white', width:400, height:120, borderRadius:5,elevation:20,marginHorizontal:5, marginVertical:5}}></Text>
+      <TextInput style={{backgroundColor:'white', width:400, height:120, borderRadius:5,elevation:10,marginHorizontal:5, marginVertical:5}}/>
     </View>
     <View style={{marginLeft:160}}>
             <TouchableOpacity onPress={()=>navigation.navigate('transaction')}>

@@ -11,12 +11,10 @@ import { useState } from 'react';
 import { dummiesDescription, icons, images } from '../../../assets';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 
-const {width, height} = Dimensions.get('window');
-
 const BrosurContent = () => {
   const [data,setData] = useState(dummiesDescription)
   return (
-    <View style={{marginHorizontal:7,}}>
+    <View style={{marginHorizontal:5}}>
             <View style={{backgroundColor:'white',flexDirection:'row',alignItems:'center', borderRadius:5,elevation:20,width:400,height:120, marginVertical:5}}>
                 <Image style={{borderRadius:8, marginLeft:5,}} source={images.img_produk4}/>
                 <Text style={{width:150,height:'90%'}}>{data.description}</Text>
