@@ -3,7 +3,7 @@ import {Image} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {
-  Home, Katalog, Promo, DetailProduk, KeranjangBelanja, Brosur, News, DetailNews, Testnavigation, TestDetailNavigation, Transaction, DetailTransaksi, Akun
+  Home, Katalog, Promo, DetailProduk, KeranjangBelanja, Brosur, News, DetailNews, Testnavigation, TestDetailNavigation, Transaction, DetailTransaksi, Akun, Register
 } from '../pages';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import { DetailTransaction } from '../components';
@@ -140,6 +140,11 @@ export const Routes = () => {
         <Stack.Screen
         name="detailtransaction"
         component={DetailTransaksi}
+        options={{headerShown: false}}
+        />
+        <Stack.Screen
+        name="register"
+        component={Register}
         options={{headerShown: false}}
         />
        

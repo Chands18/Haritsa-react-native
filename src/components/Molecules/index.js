@@ -28,7 +28,8 @@ import HeaderTransaction from './HeaderTransaction';
 import DetailTransaction from './DetailTransaction';
 import HeaderDetTransaction from './HeaderDetTransaction';
 import HeaderAccount from './HeaderAccount';
-import AkunContent from './AkunContent'
+import AkunContent from './AkunContent';
+import RegisterContent from './RegisterContent'
 
 export {
   Layout,
@@ -61,5 +62,6 @@ export {
   DetailTransaction,
   HeaderDetTransaction,
   HeaderAccount,
-  AkunContent
+  AkunContent,
+  RegisterContent
 };
