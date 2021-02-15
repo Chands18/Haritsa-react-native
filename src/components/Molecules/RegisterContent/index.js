@@ -2,8 +2,10 @@ import React from 'react';
 import {StyleSheet, Text, View, Image, TextInput, TouchableOpacity} from 'react-native';
 import {images} from '../../../assets';
 import DatePicker from 'react-native-datepicker';
+import { useNavigation } from '@react-navigation/native';
 
 const RegisterContent = () => {
+    const navigation = useNavigation();
   return (
     <View style={{marginHorizontal:10}}>
       <View style={{marginBottom:70}}>
