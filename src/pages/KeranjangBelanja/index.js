@@ -18,7 +18,6 @@ export default KeranjangBelanja
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'lightgrey',
-        justifyContent:'flex-start',
+        backgroundColor: 'white',
     }
 })

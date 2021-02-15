@@ -6,7 +6,7 @@ import { RegisterContent } from '../../components'
 const Register = () => {
     return (
         <ScrollView>
-        <View>
+        <View style={styles.container}>
             <RegisterContent/>
         </View>
         </ScrollView>
@@ -15,4 +15,9 @@ const Register = () => {
 
 export default Register
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container:{
+        backgroundColor:'white',
+        width:'100%'
+    }
+})

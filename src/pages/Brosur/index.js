@@ -6,7 +6,7 @@ import { BrosurContent, HeaderBrosur } from '../../components'
 const Brosur = () => {
     return (
         <ScrollView>
-        <View>
+        <View style={styles.container}>
             <HeaderBrosur/>
             <BrosurContent/>
         </View>
@@ -16,4 +16,9 @@ const Brosur = () => {
 
 export default Brosur
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container:{
+        backgroundColor:'white',
+        height:950
+    }
+})

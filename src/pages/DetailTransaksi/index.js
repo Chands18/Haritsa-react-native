@@ -4,7 +4,7 @@ import { DetailTransaction, HeaderDetTransaction } from '../../components'
 
 const DetailTransaksi = () => {
     return (
-        <View>
+        <View style={styles.container}>
             <HeaderDetTransaction/>
             <DetailTransaction/>
         </View>
@@ -13,4 +13,9 @@ const DetailTransaksi = () => {
 
 export default DetailTransaksi
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container:{
+        backgroundColor:'white',
+        height:'100%'
+    }
+})

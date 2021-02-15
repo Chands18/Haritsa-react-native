@@ -4,7 +4,7 @@ import { HeaderNews, NewsContent } from '../../components'
 
 const News = () => {
     return (
-        <View>
+        <View style={styles.container}>
             <HeaderNews/>
             <NewsContent/>
         </View>
@@ -13,4 +13,8 @@ const News = () => {
 
 export default News
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container:{
+        backgroundColor:'white'
+    }
+})

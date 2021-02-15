@@ -4,7 +4,7 @@ import { DetailNewsContent, HeaderDetailNews } from '../../components'
 
 const DetailNews = () => {
     return (
-        <View>
+        <View style={styles.container}>
             <HeaderDetailNews/>
             <DetailNewsContent/>
         </View>
@@ -13,4 +13,9 @@ const DetailNews = () => {
 
 export default DetailNews
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    container:{
+        backgroundColor:'white',
+        height:'100%'
+    }
+})
