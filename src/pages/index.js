@@ -13,5 +13,6 @@ import Transaction from './Transaction'
 import DetailTransaksi from './DetailTransaksi'
 import Akun from './Akun'
 import Register from './Register'
+import Login from './Login'
 
-export {Home, Katalog, Promo, DetailProduk, KeranjangBelanja, Brosur, Berkah,Testnavigation,TestDetailNavigation, News, DetailNews, Transaction, DetailTransaksi, Akun, Register};
+export {Home, Katalog, Promo, DetailProduk, KeranjangBelanja, Brosur, Berkah,Testnavigation,TestDetailNavigation, News, DetailNews, Transaction, DetailTransaksi, Akun, Register, Login};
