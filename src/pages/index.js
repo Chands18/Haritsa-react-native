@@ -11,5 +11,6 @@ import News from './News'
 import DetailNews from './DetailNews'
 import Transaction from './Transaction'
 import DetailTransaksi from './DetailTransaksi'
+import Akun from './Akun'
 
-export {Home, Katalog, Promo, DetailProduk, KeranjangBelanja, Brosur, Berkah,Testnavigation,TestDetailNavigation, News, DetailNews, Transaction, DetailTransaksi};
+export {Home, Katalog, Promo, DetailProduk, KeranjangBelanja, Brosur, Berkah,Testnavigation,TestDetailNavigation, News, DetailNews, Transaction, DetailTransaksi, Akun};

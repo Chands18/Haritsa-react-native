@@ -3,7 +3,7 @@ import {Image} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {
-  Home, Katalog, Promo, DetailProduk, KeranjangBelanja, Brosur, News, DetailNews, Testnavigation, TestDetailNavigation, Transaction, DetailTransaksi
+  Home, Katalog, Promo, DetailProduk, KeranjangBelanja, Brosur, News, DetailNews, Testnavigation, TestDetailNavigation, Transaction, DetailTransaksi, Akun
 } from '../pages';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import { DetailTransaction } from '../components';
@@ -62,9 +62,19 @@ const BottomTabNavigator = () => {
         options={{title: 'Transaction'}}
       />
       <Tab.Screen
+        name="keranjang"
+        component={KeranjangBelanja}
+        options={{title: 'Cart'}}
+      />
+      <Tab.Screen
         name="Brosur"
         component={Brosur}
         options={{title: 'Brochure'}}
+      />
+      <Tab.Screen
+        name="akun"
+        component={Akun}
+        options={{title: 'Account'}}
       />
       <Tab.Screen
         name="testnavigasi"
