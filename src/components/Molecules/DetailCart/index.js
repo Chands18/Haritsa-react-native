@@ -43,6 +43,7 @@ const DetailCart = () => {
             marginHorizontal: 5,
             flexDirection: 'row',
             backgroundColor: 'white',
+            elevation:10,
             borderRadius: 10,
           }}>
           <Image
@@ -56,6 +57,7 @@ const DetailCart = () => {
               left: 10,
               height: 200,
               borderRadius: 10,
+              elevation:10
             }}>
             <View style={{marginLeft: 15, marginTop: 5, position: 'relative'}}>
               <Text>{item.item.name}</Text>
@@ -90,7 +92,7 @@ const DetailCart = () => {
       style={{
         flexDirection: 'column',
         flexWrap: 'wrap',
-        backgroundColor:'lightgrey',
+        backgroundColor:'white',
         marginBottom:80
       }}>
       <FlatList
