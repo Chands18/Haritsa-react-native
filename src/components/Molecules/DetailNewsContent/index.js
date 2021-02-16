@@ -4,9 +4,9 @@ import { dummiesdescnews, images } from '../../../assets'
 
 const DetailNewsContent = () => {
     return (
-        <View>
-            <Image style={{width:'100%', height:160}} source={images.img_news}/>
-            <Text style={{marginHorizontal:8, textAlign:'justify'}}>{dummiesdescnews.description}</Text>
+        <View style={{marginHorizontal:8,marginTop:5}}>
+            <Image style={{width:'100%', height:160, borderRadius:8}} source={images.img_news}/>
+            <Text style={{textAlign:'justify'}}>{dummiesdescnews.description}</Text>
         </View>
     )
 }
