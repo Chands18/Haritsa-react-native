@@ -7,49 +7,54 @@ import {
 } from '../pages';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import { DetailTransaction } from '../components';
-// import {icons} from '../assets';
-// import {AppColors, AppFonts} from '../utils';
+import {icons} from '../assets';
+import {AppColors} from '../utils';
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
   return (
     <Tab.Navigator
-    //   screenOptions={({route}) => ({
-    //     tabBarIcon: ({focused, color, size}) => {
-    //       let iconName;
-    //       if (route.name === 'home') {
-    //         iconName = icons.ic_home;
-    //       } else if (route.name === 'brands') {
-    //         iconName = icons.ic_spoon;
-    //       } else if (route.name === 'challenges') {
-    //         iconName = icons.ic_list;
-    //       } else if (route.name === 'rewards') {
-    //         iconName = icons.ic_gift;
-    //       } else {
-    //         iconName = icons.ic_profile;
-    //       }
-    //       return (
-    //         <Image
-    //           source={iconName}
-    //           resizeMode="contain"
-    //           style={{
-    //             height: 20,
-    //             width: 20,
-    //             tintColor: focused
-    //               ? AppColors.icon.active
-    //               : AppColors.icon.inactive,
-    //           }}
-    //         />
-    //       );
-    //     },
-    //   })}
-    //   tabBarOptions={{
-    //     activeTintColor: AppColors.icon.active,
-    //     inactiveTintColor: AppColors.icon.inactive,
-    //     labelStyle: {
-    //       fontFamily: AppFonts.primary[200],
-    //       fontSize: 10,
-    //     },
-    //   }}
+    screenOptions={({route}) => ({
+      tabBarIcon: ({focused, color, size}) => {
+        let iconName;
+        if (route.name === 'katalog') {
+          iconName = icons.ic_home;
+        } else if (route.name === 'transaction') {
+          iconName = icons.ic_transaction;
+        } else if (route.name === 'keranjang') {
+          iconName = icons.ic_cart;
+        } else if (route.name === 'Brosur') {
+          iconName = icons.ic_brosur;
+        } else if(route.name === 'akun'){
+          iconName = icons.ic_akun;
+        } else {
+          iconName = icons.ic_profile;
+        }
+        return (
+          <Image
+            source={iconName}
+            resizeMode="contain"
+            style={{
+              height: 25,
+              width: 25,
+              top:8,
+              tintColor: focused
+                ? AppColors.icons
+                : AppColors.icons,
+            }}
+          />
+        );
+      },
+    })}
+    tabBarOptions={{
+      activeBackgroundColor:'deeppink',
+      inactiveBackgroundColor:'deeppink',
+      activeTintColor: 'yellow',
+      inactiveTintColor: 'white',
+      labelStyle: {
+        margin:5,
+        fontSize: 10,
+      },
+    }}
       >
       <Tab.Screen
         name="katalog"
@@ -81,8 +86,7 @@ const BottomTabNavigator = () => {
         component={TestDetailNavigation}
         options={{title: 'Berkah'}}
       />
-
-
+      
     </Tab.Navigator>
   );
 };
