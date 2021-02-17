@@ -85,7 +85,7 @@ export const dummiesDescription =
     {
         price:'Rp 20,000,00',
         name:'Nama Produk',
-        description:'menambahkan butter untuk makanan bayi pun piliihan yang baik. lorem ipsum dolor asdsdfdf djdk ahaha kuku kaki kakekku kaku kaku ',
+        description:'menambahkan butter untuk makanan bayi pun piliihan yang baik. lorem ipsum dolor asdsdfdf djdk ahaha kuku kaki kakekku kaku kaku Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ',
         stock:'Stok:80',
         sold:'terjual:20',
     }
