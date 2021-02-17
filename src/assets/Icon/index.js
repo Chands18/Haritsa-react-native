@@ -1,6 +1,6 @@
 export const icons={
     ic_backicon:require('./BackIcon.png'),
-    ic_logo:require('./hrtsicon.png'),
+    ic_logo:require('./cartlogo.png'),
     ic_cart:require('./cart2.png'),
     ic_search:require('./Vector2.png'),
     ic_line:require('./Line.png'),
