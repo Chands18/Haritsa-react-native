@@ -94,7 +94,7 @@ const Stack = createStackNavigator();
 export const Routes = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="home">
+      <Stack.Navigator initialRouteName="login">
         
         <Stack.Screen
           name="bottomnavigator"

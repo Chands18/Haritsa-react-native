@@ -1,9 +1,11 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import {Image} from 'react-native';
 import {StyleSheet, Text, View, TextInput, TouchableOpacity} from 'react-native';
 import {images} from '../../../assets';
 
 const LoginContent = () => {
+  const navigation = useNavigation();
   return (
     <View style={{marginHorizontal: 20}}>
       <View style={{marginBottom:70}}>
@@ -38,7 +40,7 @@ const LoginContent = () => {
         />
       </View>
       <View style={{marginTop: 40, flexDirection:'row', justifyContent:'space-evenly'}}>
-        <TouchableOpacity onPress={() => navigation.navigate('')}>
+        <TouchableOpacity onPress={() => navigation.navigate('home')}>
           <Text
             style={{
               backgroundColor: 'deeppink',
@@ -52,11 +54,16 @@ const LoginContent = () => {
             }}>
             Sign In
           </Text>
-        </TouchableOpacity>
+        </TouchableOpacity >
         <Text style={{alignSelf:'center'}}>Forgot Password</Text>
       </View>
-      <Text style={{textAlign:'center',top:15}}>Doesn't have any account?Register Here</Text>
-      <Text style={{textAlign:'center',top:40}}>Ver 1.0</Text>
+      <View style={{flexDirection:'row',alignSelf:'center',top:15}}>
+      <Text>Doesn't have any account?</Text>
+      <TouchableOpacity onPress={() => navigation.navigate('register')}>
+        <Text>Register Here</Text>
+      </TouchableOpacity>
+      </View>
+      <Text style={{textAlign:'center',top:50}}>Ver 1.0</Text>
     </View>
   );
 };

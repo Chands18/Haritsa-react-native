@@ -110,7 +110,7 @@ const RegisterContent = () => {
         />
       </View>
       <View style={{marginTop: 20}}>
-        <TouchableOpacity onPress={() => navigation.navigate('login')}>
+        <TouchableOpacity onPress={() => navigation.navigate('')}>
           <Text
             style={{
               backgroundColor: 'deeppink',
