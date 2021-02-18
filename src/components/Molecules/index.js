@@ -22,15 +22,17 @@ import DetailSlider from './DetailSlider';
 import HeaderNews from './HeaderNews';
 import NewsContent from './NewsContent';
 import HeaderDetailNews from './HeaderDetailNews';
-import DetailNewsContent from './DetailNewsContent'
-import TransactionContent from './TransactionContent'
+import DetailNewsContent from './DetailNewsContent';
+import TransactionContent from './TransactionContent';
 import HeaderTransaction from './HeaderTransaction';
 import DetailTransaction from './DetailTransaction';
 import HeaderDetTransaction from './HeaderDetTransaction';
 import HeaderAccount from './HeaderAccount';
 import AkunContent from './AkunContent';
 import RegisterContent from './RegisterContent';
-import LoginContent from './LoginContent'
+import LoginContent from './LoginContent';
+import {GlobalHeader} from './GlobalHeader';
+import {CardCart} from './CardCart';
 
 export {
   Layout,
@@ -65,5 +67,7 @@ export {
   HeaderAccount,
   AkunContent,
   RegisterContent,
-  LoginContent
+  LoginContent,
+  GlobalHeader,
+  CardCart,
 };
